@@ -1,6 +1,6 @@
 import json
 import unittest
-import os
+
 from contentstack.embedded.style_type import StyleType
 from contentstack.helper.metadata import Metadata
 from contentstack.render.options import OptionsCallback
@@ -41,7 +41,7 @@ class TestUtility(unittest.TestCase):
                       'type=\"entry\"></div>'
         metadata = Metadata('text_example', 'entry', 'blt647367443', 'products', StyleType.BLOCK, 'outer_html',
                             'attributes')
-        html, meta = Utils.get_embedded_objects(html_string, metadata=metadata)
+        html, meta = Utils.get_embedded_objects(html_string)
         print(html, meta)
 
     def test_embedded_rte_string(self):
@@ -53,5 +53,5 @@ class TestUtility(unittest.TestCase):
                     "data-sys-asset-contenttype=\"image/jpeg\" type=\"asset\" sys-style-type=\"display\"></figure> "
         metadata = Metadata('text_example', 'entry', 'blt647367443', 'products', StyleType.BLOCK, 'outer_html',
                             'attributes')
-        html, meta = Utils.get_embedded_objects(html_text, metadata)
+        html, meta = Utils.get_embedded_objects(html_text)
         print(html, meta)

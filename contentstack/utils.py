@@ -9,7 +9,6 @@
         [type]: [description]
 """
 
-
 import json
 
 from lxml import etree
@@ -35,6 +34,7 @@ class Utils:
         FileNotFoundError: [description]
         NameError: [description]
     """
+
     @staticmethod
     def render(entry_obj, key_path: list, option_callback: OptionsCallback):
         valid = _is_json(entry_obj)
@@ -106,7 +106,7 @@ class Utils:
                         Utils._get_content(keys_array, node, option_callback)
 
     @staticmethod
-    def render_content(rte_array, embed_entry: dict,
+    def render_content(rte_array, embed_obj: dict,
                        option_callback: OptionsCallback) -> object:
         if isinstance(rte_array, str):
             # convert to html
@@ -118,12 +118,16 @@ class Utils:
         return None
 
     @staticmethod
-    def get_embedded_objects(html_doc, metadata: Metadata):
+    def get_embedded_objects(html_doc):
         tag = etree.fromstring(html_doc)
-        print(tag)
+        typeof = tag.attrib['type']
+        uid = tag.attrib['data-sys-entry-uid']
+        content_type = tag.attrib['data-sys-content-type-uid']
+        style = tag.attrib['sys-style-type']
+        # outer_html = tag.attrib['outer_html']
         # Elements embeddedEntries = html.body().getElementsByClass("embedded-entry");
         # Elements embeddedAssets = html.body().getElementsByClass("embedded-asset");
-
+        metadata = Metadata('text', typeof, uid, content_type, style, 'outer_html', 'attributes')
         return tag, metadata
 
     @staticmethod
