@@ -110,7 +110,7 @@ class Utils:
                        option_callback: OptionsCallback) -> object:
         if isinstance(rte_array, str):
             # convert to html
-            Utils.get_embedded_objects(rte_array)
+            html, metadata = Utils.get_embedded_objects(rte_array)
             return None
         elif isinstance(rte_array, list):
             for rte in rte_array:
