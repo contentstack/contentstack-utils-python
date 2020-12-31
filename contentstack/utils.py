@@ -81,7 +81,6 @@ class Utils:
     @staticmethod
     def _get_content(keys_array: list, entry, option_callback: OptionsCallback):
         """[summary]
-
         Args:
             keys_array (list): [description]
             entry ([type]): [description]
