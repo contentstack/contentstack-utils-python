@@ -45,6 +45,7 @@ class TestUtility(unittest.TestCase):
         print(html, meta)
 
     def test_embedded_rte_string(self):
+
         html_text = "<p>Global multiple group 1</p><figure class=\"embedded-asset\" data-redactor-type=\"embed\" " \
                     "data-widget-code=\"\" data-sys-asset-filelink=\"https://dev16-images.contentstack.com/v3/assets" \
                     "/blt77263d300aee3e6b/blt7324a68403ee7281/5f83f543d418e407f919e0e4/11.jpg\" " \
