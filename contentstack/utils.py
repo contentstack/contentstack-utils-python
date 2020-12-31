@@ -111,10 +111,11 @@ class Utils:
         if isinstance(rte_array, str):
             # convert to html
             html, metadata = Utils.get_embedded_objects(rte_array)
-            return None
+            return html, metadata
         elif isinstance(rte_array, list):
             for rte in rte_array:
-                return None
+                html, metadata = Utils.get_embedded_objects(rte_array)
+                return html, metadata
         return None
 
     @staticmethod
