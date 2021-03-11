@@ -1,7 +1,7 @@
 import unittest
 
-from contentstack.embedded.style_type import StyleType
-from contentstack.helper.metadata import Metadata
+from contentstack_utils.embedded.styletype import StyleType
+from contentstack_utils.helper.metadata import Metadata
 
 
 class TestMetadata(unittest.TestCase):

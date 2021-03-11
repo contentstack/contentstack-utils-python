@@ -13,8 +13,8 @@ import json
 
 from lxml import etree
 
-from contentstack.helper.metadata import Metadata
-from contentstack.render.options import OptionsCallback
+from contentstack_utils.helper.metadata import Metadata
+from contentstack_utils.render.options import OptionsCallback
 
 
 def _is_json(file):
@@ -40,7 +40,7 @@ class Utils:
         valid = _is_json(entry_obj)
         if not valid:
             raise FileNotFoundError('Invalid file found')
-        elif isinstance(entry_obj, list):
+        if isinstance(entry_obj, list):
             for entry in entry_obj:
                 Utils.render(entry, key_path, option_callback)
         elif isinstance(entry_obj, dict):
@@ -112,7 +112,7 @@ class Utils:
             # convert to html
             html, metadata = Utils.get_embedded_objects(rte_array)
             return html, metadata
-        elif isinstance(rte_array, list):
+        if isinstance(rte_array, list):
             for rte in rte_array:
                 html, metadata = Utils.get_embedded_objects(rte_array)
                 return html, metadata

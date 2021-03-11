@@ -1,6 +1,7 @@
 import unittest
 
-from contentstack.embedded.item_type import ItemType
+# from contentstack_utils.embedded.item_type import ItemType
+from contentstack_utils.embedded.item_type import ItemType
 
 
 class TestItemType(unittest.TestCase):
@@ -12,5 +13,3 @@ class TestItemType(unittest.TestCase):
     def test_item_type_asset(self):
         typeof = ItemType.ASSET
         self.assertEqual('asset', typeof.value)
-
-

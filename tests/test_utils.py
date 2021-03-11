@@ -1,10 +1,10 @@
 import json
 import unittest
 
-from contentstack.embedded.style_type import StyleType
-from contentstack.helper.metadata import Metadata
-from contentstack.render.options import OptionsCallback
-from contentstack.utils import Utils
+from contentstack_utils.embedded.styletype import StyleType
+from contentstack_utils.helper.metadata import Metadata
+from contentstack_utils.render.options import OptionsCallback
+from contentstack_utils.utils import Utils
 
 
 class TestUtility(unittest.TestCase):
@@ -19,7 +19,7 @@ class TestUtility(unittest.TestCase):
             callback = OptionsCallback()
             Utils.render(entry, key_path, callback)
 
-    def test_̦if_entry_list_supplied(self):
+    def test_̦if_entry_list_not_supplied(self):
         key_path = ['rich_text_editor']
         with open('tests/mocks/embedded_items.json') as file:
             json_array = json.load(file)
@@ -39,13 +39,12 @@ class TestUtility(unittest.TestCase):
                       'data-widget-code=\"\" data-sys-entry-uid=\"blt1c9e75e3608f8c6b\" ' \
                       'data-sys-entry-locale=\"en-us\" data-sys-content-type-uid=\"0_solve\" sys-style-type=\"block\" ' \
                       'type=\"entry\"></div>'
-        metadata = Metadata('text_example', 'entry', 'blt647367443', 'products', StyleType.BLOCK, 'outer_html',
-                            'attributes')
+        Metadata('text_example', 'entry', 'blt647367443', 'products', StyleType.BLOCK, 'outer_html',
+                 'attributes')
         html, meta = Utils.get_embedded_objects(html_string)
         print(html, meta)
 
     def test_embedded_rte_string(self):
-
         html_text = "<p>Global multiple group 1</p><figure class=\"embedded-asset\" data-redactor-type=\"embed\" " \
                     "data-widget-code=\"\" data-sys-asset-filelink=\"https://dev16-images.contentstack.com/v3/assets" \
                     "/blt77263d300aee3e6b/blt7324a68403ee7281/5f83f543d418e407f919e0e4/11.jpg\" " \
