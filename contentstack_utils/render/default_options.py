@@ -1,8 +1,7 @@
 # pylint: disable=missing-function-docstring
 # pylint: disable=missing-docstring
 # pylint: disable=too-few-public-methods
-
-from contentstack.helper.metadata import Metadata
+from contentstack_utils.helper.metadata import Metadata
 
 
 def _title_or_uid(embedded_obj: dict) -> str:
@@ -35,11 +34,11 @@ class DefaultOptions:
             return '<div><p>' + _title_or_uid(embedded_obj) \
                    + '</p><div><p>Content type: <span>' + embedded_obj['_content_type_uid'] \
                    + '</span></p></div>'
-        elif metadata.style_type.name == 'inline':
+        if metadata.style_type.name == 'inline':
             return '<span>' + _title_or_uid(embedded_obj) + '</span>'
-        elif metadata.style_type.name == 'link':
+        if metadata.style_type.name == 'link':
             return '<a href=' + embedded_obj['url'] + '>' + _title_or_uid(embedded_obj) + '</a>'
-        elif metadata.style_type.name == 'display':
+        if metadata.style_type.name == 'display':
             return '<img src=' + embedded_obj['url'] + ' alt=' \
                    + _asset_title_or_uid(embedded_obj) + '/>'
         return ''

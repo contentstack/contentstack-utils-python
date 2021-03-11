@@ -1,5 +1,5 @@
 # pylint: disable=missing-function-docstring
-from contentstack.helper.metadata import Metadata
+from contentstack_utils.helper.metadata import Metadata
 
 
 class OptionsCallback:

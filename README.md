@@ -1,0 +1,103 @@
+# Contentstack Utility
+
+This guide will help you get started with Contentstack Python Utils SDK to build apps powered by Contentstack.
+
+## Prerequisites
+
+The latest version of [PyCharm](https://www.jetbrains.com/pycharm/download/) or [Visual Studio Code](https://code.visualstudio.com/download)
+
+[Python 3](https://docs.python-guide.org/starting/installation/#python-3-installation-guides)
+
+[Create virtual environment](https://packaging.python.org/guides/installing-using-pip-and-virtual-environments/#creating-a-virtual-environment)
+
+[Activate virtual environment](https://packaging.python.org/guides/installing-using-pip-and-virtual-environments/#activating-a-virtual-environment)
+
+## SDK Installation and Setup
+
+To set up Python Utils SDK, Go to terminal and locate the virtual environment path and type below.
+
+```python
+   pip install contentstack_utils
+```
+
+If you are using Contentstack Python SDK in your project by running the following commands,  then “contentstack_utils”  is already imported into your project.
+
+## For the latest version
+
+```python
+   pip install Contentstack
+```
+
+## For the specific version
+
+```python
+   pip install Contentstack==1.3.0
+```
+
+## Usage
+
+Let’s learn how you can use Utils SDK to render embedded items. 
+
+### Create Render Option
+
+To render embedded items on the front-end, use the renderContents function, and define the UI elements you want to show in the front-end of your website, as shown in the example code below:
+
+```python
+   
+   Utils.renderContents(rteArray, localJsonObj, (embedded_object, metadata) -> {
+         
+         switch (metadata.get_style_type()) {
+
+            case BLOCK:
+               title = embedded_object['title']
+               multi_line = embedded_object['title']
+               return '<p>'+title+'</p><span>'+multi_line+'</span>'
+
+            case INLINE:
+               title_inline = embedded_object['title']
+               ml_inline = embedded_object['multi_line']
+               return ¸<p>'+title_inline+'</p><span>'+ml_inline+'</span>'
+
+            case LINKED:
+               title_linked = embedded_object['title']
+               ml_linked = embedded_object['multi_line']
+               return '<p>'+title_linked+'</p><span>'+ml_linked+'</span>'
+            
+            case DISPLAYABLE:
+               title_diplayable = embedded_object['title']
+               ml_diplayable = embedded_object['multi_line']
+               return '<p>'+title_diplayable+'</p><span>'+ml_diplayable+ '</span>'
+            
+            default:
+               return null;
+         }
+   });
+
+```
+
+## Basic Queries
+
+Contentstack Utils SDK lets you interact with the Content Delivery APIs and retrieve embedded items from the RTE field of an entry.
+
+## Fetch Embedded Item(s) from a Single Entry
+
+To get an embedded item of a single entry, you need to provide the stack API key, environment name, content type’s UID, and entry’s UID. Then, use the `entry.fetch` function as shown below:
+
+```python
+   stack = contentstack.Stack('api_key','delivery_token','environment')
+   content_type = stack.content_type("content_type_uid")
+   entry = content_type.entry("entry_uid")
+   result = entry.fetch()
+```
+
+## Fetch Embedded Item(s) from Multiple Entries
+
+To get embedded items from multiple entries, you need to provide the stack API key, delivery token, environment name, and content type’s UID. 
+
+```python
+   stack = contentstack.Stack('api_key','delivery_token','environment')
+   query = stack.content_type("content_type_uid").query()
+   result = query.find()
+```
+
+Fetch entry/entries and Render RTE using GraphQL and ‘@contentstack_utils’ SDK

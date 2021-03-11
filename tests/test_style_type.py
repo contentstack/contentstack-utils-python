@@ -1,6 +1,6 @@
 import unittest
 
-from contentstack.embedded.style_type import StyleType
+from contentstack_utils.embedded.styletype import StyleType
 
 
 class TestStyleType(unittest.TestCase):

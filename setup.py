@@ -6,10 +6,10 @@ with open(os.path.join(os.path.dirname(__file__), 'README.md')) as readme:
     long_description = readme.read()
 
 setup(
-    name='contentstack',
+    name='contentstack_utils',
     packages=find_packages(include=['contentstack']),
-    description="Contentstack-Utils is a Utility package for Contentstack headless CMS with an API-first approach.",
-    author='ishaileshmishra',
+    description="contentstack_utils is a Utility package for Contentstack headless CMS with an API-first approach.",
+    author='contentstack',
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/contentstack/contentstack-utils-python",
@@ -29,4 +29,6 @@ setup(
         'Programming Language :: Python :: 3.8',
         'Programming Language :: Python :: 3.9',
     ],
+
+    python_requires='>=3.6',
 )
