@@ -1,12 +1,10 @@
 # pylint: disable=missing-function-docstring
-"""[summary]
-
-    Raises:
-        FileNotFoundError: [description]
-        NameError: [description]
-
-    Returns:
-        [type]: [description]
+"""
+Utils module helps to get access of public functions like:
+    render
+    render_content
+    get_embedded_objects
+    get_embedded_entry
 """
 
 import json
