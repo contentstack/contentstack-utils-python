@@ -15,7 +15,12 @@ setup(
     url="https://github.com/contentstack/contentstack-utils-python",
     version='0.0.1',
     license='MIT',
-    install_requires=[],
+    install_requires=[ 
+        pip~=21.0.1
+        setuptools~=47.1.0
+        lxml~=4.6.2
+        pylint
+    ],
     setup_requires=['pytest-runner'],
     tests_require=['pytest==4.4.1'],
     test_suite='tests',
