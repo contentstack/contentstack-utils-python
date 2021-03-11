@@ -54,7 +54,6 @@ class Metadata:
         self.outer_html = outer_html
         self.attributes = attributes
 
-    # getter get_text() method
     @property
     def get_text(self):
         """retruns text for embedded objects
@@ -64,7 +63,6 @@ class Metadata:
         """
         return self.text
 
-    # getter get_item_type() method
     @property
     def get_item_type(self):
         """retruns item_type for embedded objects
@@ -74,7 +72,6 @@ class Metadata:
         """
         return self.item_type
 
-    # getter get_item_uid() method
     @property
     def get_item_uid(self):
         """retruns item_uid for embedded objects
@@ -84,7 +81,6 @@ class Metadata:
         """
         return self.item_uid
 
-    # getter get_content_type_uid() method
     @property
     def get_content_type_uid(self):
         """retruns content_type_uid for embedded objects
@@ -94,7 +90,6 @@ class Metadata:
         """
         return self.content_type_uid
 
-    # getter get_style_type() method
     @property
     def get_style_type(self):
         """retruns style_type for embedded objects
@@ -104,7 +99,6 @@ class Metadata:
         """
         return self.style_type
 
-    # getter get_outer_html() method
     @property
     def get_outer_html(self):
         """retruns outer_html for embedded objects
@@ -114,7 +108,6 @@ class Metadata:
         """
         return self.outer_html
 
-    # getter get_attributes() method
     @property
     def get_attributes(self):
         """ retruns attributes for embedded objects
