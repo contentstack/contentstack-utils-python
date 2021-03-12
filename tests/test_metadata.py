@@ -1,5 +1,4 @@
 import unittest
-
 from contentstack_utils.embedded.styletype import StyleType
 from contentstack_utils.helper.metadata import Metadata
 
@@ -7,10 +6,9 @@ from contentstack_utils.helper.metadata import Metadata
 class TestMetadata(unittest.TestCase):
 
     def setUp(self):
-        self.metadata = Metadata('product', 'entry', 'blt87483473746', 'products',
-                                 StyleType.BLOCK, 'text_for_outer_html', 'attributes_is_string_for, now')
+        self.metadata = Metadata('product', 'entry', 'blt87483473746', 'products', 
+        StyleType.BLOCK, 'text_for_outer_html', 'attributes_is_string_for, now')
 
-    # matching if not None
     def test_metadata_mojo(self):
         self.assertIsNotNone(self.metadata)
 
@@ -35,12 +33,11 @@ class TestMetadata(unittest.TestCase):
     def test_metadata_style_type(self):
         self.assertIsNotNone(self.metadata.get_style_type)
 
-    # matching values
     def test_metadata_object_text_value(self):
         self.assertEqual('product', self.metadata.get_text)
 
-    def test_metadata_object_outer_html_value(self):
-        self.assertEqual('text_for_outer_html', self.metadata.outer_html.lower())
+    def test_outer_html(self):
+        self.assertEqual('text_for_outer_html', self.metadata.get_outer_html)
 
     def test_metadata_item_type_value(self):
         self.assertEqual('entry', self.metadata.get_item_type)

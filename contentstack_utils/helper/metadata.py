@@ -5,26 +5,7 @@
         str: text, item_type, item_uid, type_uid, style_type, outer_html and attributes
 """
 
-import enum
-
-
-# pylint: disable=too-many-arguments
-class StyleType(enum.Enum):
-    """
-        This StyleType contains four options like below.
-
-        BLOCK
-        INLINE
-        LINK
-        DISPLAY
-        DOWNLOADABLE
-    """
-
-    BLOCK = "block"
-    INLINE = 'inline'
-    LINK = 'link'
-    DISPLAY = 'displayable'
-    DOWNLOADABLE = 'downloadable'
+from contentstack_utils.embedded.styletype import StyleType
 
 
 class Metadata:
@@ -56,7 +37,7 @@ class Metadata:
 
     @property
     def get_text(self):
-        """retruns text for embedded objects
+        """returns text for embedded objects
 
         Returns:
             str : text for embedded objects
@@ -65,7 +46,7 @@ class Metadata:
 
     @property
     def get_item_type(self):
-        """retruns item_type for embedded objects
+        """returns item_type for embedded objects
 
         Returns:
             str :  item_type for embedded objects
@@ -74,7 +55,7 @@ class Metadata:
 
     @property
     def get_item_uid(self):
-        """retruns item_uid for embedded objects
+        """returns item_uid for embedded objects
 
         Returns:
             str : item_uid for embedded objects
@@ -83,7 +64,7 @@ class Metadata:
 
     @property
     def get_content_type_uid(self):
-        """retruns content_type_uid for embedded objects
+        """returns content_type_uid for embedded objects
 
         Returns:
             str :  content_type_uid for embedded objects
@@ -91,8 +72,8 @@ class Metadata:
         return self.content_type_uid
 
     @property
-    def get_style_type(self):
-        """retruns style_type for embedded objects
+    def get_style_type(self) -> StyleType:
+        """returns style_type for embedded objects
 
         Returns:
             StyleType :  style_type for embedded objects
@@ -101,7 +82,7 @@ class Metadata:
 
     @property
     def get_outer_html(self):
-        """retruns outer_html for embedded objects
+        """returns outer_html for embedded objects
 
         Returns:
             str :  outer_html for embedded objects
@@ -110,7 +91,7 @@ class Metadata:
 
     @property
     def get_attributes(self):
-        """ retruns attributes for embedded objects
+        """ returns attributes for embedded objects
 
         Returns:
             str :  attributes for embedded objects

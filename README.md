@@ -99,5 +99,3 @@ To get embedded items from multiple entries, you need to provide the stack API k
    query = stack.content_type("content_type_uid").query()
    result = query.find()
 ```
-
-Fetch entry/entries and Render RTE using GraphQL and ‘@contentstack_utils’ SDK

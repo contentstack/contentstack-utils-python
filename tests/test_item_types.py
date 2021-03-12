@@ -1,6 +1,4 @@
 import unittest
-
-# from contentstack_utils.embedded.item_type import ItemType
 from contentstack_utils.embedded.item_type import ItemType
 
 

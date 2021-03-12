@@ -19,8 +19,8 @@ class TestStyleType(unittest.TestCase):
 
     def test_style_type_display(self):
         style = StyleType.DISPLAY
-        self.assertEqual('displayable', style.value)
+        self.assertEqual('display', style.value)
 
     def test_style_type_downloadable(self):
-        style = StyleType.DOWNLOADABLE
-        self.assertEqual('downloadable', style.value)
+        style = StyleType.DOWNLOAD
+        self.assertEqual('download', style.value)

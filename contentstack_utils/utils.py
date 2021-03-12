@@ -8,11 +8,11 @@ Utils module helps to get access of public functions like:
 """
 
 import json
-
 from lxml import etree
 
+from contentstack_utils.embedded.styletype import StyleType
 from contentstack_utils.helper.metadata import Metadata
-from contentstack_utils.render.options import OptionsCallback
+from contentstack_utils.render.options import Options
 
 
 def _is_json(file):
@@ -23,70 +23,62 @@ def _is_json(file):
         return False
 
 
+def extract_keys(_embedded_items):
+    available_keys: list = _embedded_items.keys()
+    return available_keys
+
+
+def find_embedded_entry(json_array: list, metadata: Metadata):
+    for obj in json_array:
+        if obj['uid'] == metadata.get_item_uid:
+            return obj
+    return None
+
+
 class Utils:
     """
     render staticmethod, that accepts entry/entries, key path and render_object
     entry_obj: [list] or [dict] that contains list or dic object
     key_path: list of key_path
     Raises:
-        FileNotFoundError: [description]
+        FileNotFoundError: if file not found or invalid resource received
         NameError: [description]
     """
 
     @staticmethod
-    def render(entry_obj, key_path: list, option_callback: OptionsCallback):
+    def render(entry_obj, key_path: list, option_callback: Options):
         valid = _is_json(entry_obj)
+
         if not valid:
             raise FileNotFoundError('Invalid file found')
+
         if isinstance(entry_obj, list):
             for entry in entry_obj:
                 Utils.render(entry, key_path, option_callback)
-        elif isinstance(entry_obj, dict):
+
+        if isinstance(entry_obj, dict):
             Utils._get_embedded_keys(entry_obj, key_path, option_callback)
-        raise NameError('Invalid file found')
 
     @staticmethod
-    def _get_embedded_keys(entry, key_path, option_callback: OptionsCallback):
-        """[summary]
+    def _get_embedded_keys(entry, key_path, option_callback: Options):
 
-        Args:
-            entry ([type]): [description]
-            key_path ([type]): [description]
-            option_callback ([type]): [description]
-        """
         if '_embedded_items' in entry:
             if key_path is not None:
                 for path in key_path:
-                    Utils._find_content(entry, path, option_callback)
+                    Utils._find_embed_keys(entry, path, option_callback)
             else:
                 _embedded_items = entry['_embedded_items']
                 available_keys: list = _embedded_items.keys()
                 for path in available_keys:
-                    Utils._find_content(entry, path, option_callback)
+                    Utils._find_embed_keys(entry, path, option_callback)
 
     @staticmethod
-    def _find_content(entry, path, option_callback: OptionsCallback):
-        """
-        [summary]
-        Args:
-            entry ([type]): [description]
-            path ([type]): [description]
-            option_callback (function): [description]
-        """
+    def _find_embed_keys(entry, path, option_callback: Options):
         keys = path.split('.')
         Utils._get_content(keys, entry, option_callback)
 
     @staticmethod
-    def _get_content(keys_array: list, entry, option_callback: OptionsCallback):
-        """[summary]
-        Args:
-            keys_array (list): [description]
-            entry ([type]): [description]
-            option_callback (function): [description]
-
-        Returns:
-            [type]: [description]
-        """
+    def _get_content(keys_array: list, entry, option_callback: Options):
         if keys_array is not None and len(keys_array) > 0:
             key = keys_array[0]
             if len(keys_array) == 1 and keys_array[0] in entry:
@@ -104,35 +96,59 @@ class Utils:
                         Utils._get_content(keys_array, node, option_callback)
 
     @staticmethod
-    def render_content(rte_array, embed_obj: dict,
-                       option_callback: OptionsCallback) -> object:
-        if isinstance(rte_array, str):
-            # convert to html
-            html, metadata = Utils.get_embedded_objects(rte_array)
-            return html, metadata
-        if isinstance(rte_array, list):
-            for rte in rte_array:
-                html, metadata = Utils.get_embedded_objects(rte_array)
-                return html, metadata
-        return None
+    def render_content(rte_content, embed_obj: dict, callback: Options) -> object:
+        if isinstance(rte_content, str):
+            return get_embedded_objects(rte_content, embed_obj, callback)
+        elif isinstance(rte_content, list):
+            temp = []
+            for rte in rte_content:
+                temp.append(Utils.render_content(rte, embed_obj, callback))
+            return temp
+        return rte_content
 
-    @staticmethod
-    def get_embedded_objects(html_doc):
-        tag = etree.fromstring(html_doc)
-        typeof = tag.attrib['type']
-        uid = tag.attrib['data-sys-entry-uid']
-        content_type = tag.attrib['data-sys-content-type-uid']
-        style = tag.attrib['sys-style-type']
-        # outer_html = tag.attrib['outer_html']
-        # Elements embeddedEntries = html.body().getElementsByClass("embedded-entry");
-        # Elements embeddedAssets = html.body().getElementsByClass("embedded-asset");
-        metadata = Metadata('text', typeof, uid, content_type, style, 'outer_html', 'attributes')
-        return tag, metadata
+    def convert_style(style) -> StyleType:
+        if style == 'block':
+            return StyleType.BLOCK
+        elif style == 'inline':
+            return StyleType.INLINE
+        elif style == 'link':
+            return StyleType.LINK
+        elif style == 'display':
+            return StyleType.DISPLAY
+        elif style == 'download':
+            return StyleType.DOWNLOAD
 
-    @staticmethod
-    def find_embedded_entry(json_array: list, metadata: Metadata):
-        for obj in json_array:
-            if obj['uid'] == metadata.get_item_uid and \
-                    obj['_content_type_uid'] == metadata.content_type_uid:
-                return obj
-        return None
+
+def get_embedded_objects(html_doc, embedded_obj, callback):
+    import re
+
+    document = f"<items>{html_doc}</items>"
+    tag = etree.fromstring(document)
+    html_doc = etree.tostring(tag).decode('utf-8')
+    html_doc = re.sub('(?ms)<%s[^>]*>(.*)</%s>' % (tag.tag, tag.tag), '\\1', html_doc)
+    elements = tag.xpath("//*[contains(@class, 'embedded-asset') or contains(@class, 'embedded-entry')]")
+    for element in elements:
+        uid = ''
+        content_type = None
+        typeof = element.attrib['type']
+        if typeof == 'asset':
+            uid = element.attrib['data-sys-asset-uid']
+        else:
+            uid = element.attrib['data-sys-entry-uid']
+            content_type = element.attrib['data-sys-content-type-uid']
+        style = element.attrib['sys-style-type']
+        outer_html = etree.tostring(element).decode('utf-8')
+        attributes = element.attrib
+        style = Utils.convert_style(style)
+        metadata = Metadata(element.text, typeof, uid, content_type, style, outer_html, attributes)
+
+        if '_embedded_items' in embedded_obj:
+            keys = extract_keys(embedded_obj['_embedded_items'])
+            for key in keys:
+                items_array = embedded_obj['_embedded_items'][key]
+                item = find_embedded_entry(items_array, metadata)
+                if item is not None:
+                    replaceable_str = callback.render_options(item, metadata)
+                    html_doc = html_doc.replace(metadata.outer_html, replaceable_str)
+                    break
+        return html_doc
