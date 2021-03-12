@@ -15,11 +15,11 @@ class StyleType(enum.Enum):
     INLINE
     LINK
     DISPLAY
-    DOWNLOADABLE
+    DOWNLOAD
     """
 
-    BLOCK = "block"
+    BLOCK = 'block'
     INLINE = 'inline'
     LINK = 'link'
-    DISPLAY = 'displayable'
-    DOWNLOADABLE = 'downloadable'
+    DISPLAY = 'display'
+    DOWNLOAD = 'download'

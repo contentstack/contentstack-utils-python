@@ -1,6 +1,7 @@
 import os
 
-from setuptools import find_packages, setup
+from setuptools import find_packages
+from distutils.core import setup
 
 with open(os.path.join(os.path.dirname(__file__), 'README.md')) as readme:
     long_description = readme.read()
@@ -13,13 +14,10 @@ setup(
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/contentstack/contentstack-utils-python",
-    version='0.0.1',
     license='MIT',
-    install_requires=[ 
-        pip~=21.0.1
-        setuptools~=47.1.0
-        lxml~=4.6.2
-        pylint
+    version='0.0.1',
+    install_requires=[
+        
     ],
     setup_requires=['pytest-runner'],
     tests_require=['pytest==4.4.1'],
