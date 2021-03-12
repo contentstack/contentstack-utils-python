@@ -29,7 +29,7 @@ def _asset_title_or_uid(embedded_obj: dict) -> str:
 class Options:
 
     @staticmethod
-    def render_options(embedded_obj: dict, metadata: Metadata) -> str:
+    def render_options(embedded_obj: dict, metadata: Metadata):
         if metadata.style_type.value == 'block':
             return '<div><p>' + _title_or_uid(embedded_obj) \
                    + '</p><div><p>Content type: <span>' + embedded_obj['_content_type_uid'] \
@@ -43,4 +43,4 @@ class Options:
                    + _asset_title_or_uid(embedded_obj) + '/>'
         if metadata.style_type.value == 'download':
             return '<a href=' + embedded_obj['url'] + '>' + _asset_title_or_uid(embedded_obj) + '</a>'
-        return ''
+

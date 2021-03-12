@@ -43,36 +43,16 @@ Let’s learn how you can use Utils SDK to render embedded items.
 To render embedded items on the front-end, use the renderContents function, and define the UI elements you want to show in the front-end of your website, as shown in the example code below:
 
 ```python
-   
-   Utils.renderContents(rteArray, localJsonObj, (embedded_object, metadata) -> {
-         
-         switch (metadata.get_style_type()) {
-
-            case BLOCK:
-               title = embedded_object['title']
-               multi_line = embedded_object['title']
-               return '<p>'+title+'</p><span>'+multi_line+'</span>'
-
-            case INLINE:
-               title_inline = embedded_object['title']
-               ml_inline = embedded_object['multi_line']
-               return ¸<p>'+title_inline+'</p><span>'+ml_inline+'</span>'
-
-            case LINKED:
-               title_linked = embedded_object['title']
-               ml_linked = embedded_object['multi_line']
-               return '<p>'+title_linked+'</p><span>'+ml_linked+'</span>'
-            
-            case DISPLAYABLE:
-               title_diplayable = embedded_object['title']
-               ml_diplayable = embedded_object['multi_line']
-               return '<p>'+title_diplayable+'</p><span>'+ml_diplayable+ '</span>'
-            
-            default:
-               return null;
-         }
-   });
-
+    from contentstack_utils.utils import Utils
+    from contentstack_utils.render.options import Options
+    
+    json_array # should be type of dictionary or list
+    rte_content = "html_string"
+    
+    callback = Options()
+    response = Utils.render_content(rte_content, json_array, callback)
+    print(response)
+    
 ```
 
 ## Basic Queries
@@ -84,6 +64,8 @@ Contentstack Utils SDK lets you interact with the Content Delivery APIs and retr
 To get an embedded item of a single entry, you need to provide the stack API key, environment name, content type’s UID, and entry’s UID. Then, use the `entry.fetch` function as shown below:
 
 ```python
+    import contentstack
+    
    stack = contentstack.Stack('api_key','delivery_token','environment')
    content_type = stack.content_type("content_type_uid")
    entry = content_type.entry("entry_uid")
@@ -95,7 +77,9 @@ To get an embedded item of a single entry, you need to provide the stack API key
 To get embedded items from multiple entries, you need to provide the stack API key, delivery token, environment name, and content type’s UID. 
 
 ```python
-   stack = contentstack.Stack('api_key','delivery_token','environment')
-   query = stack.content_type("content_type_uid").query()
-   result = query.find()
+    import contentstack
+
+    stack = contentstack.Stack('api_key','delivery_token','environment')
+    query = stack.content_type("content_type_uid").query()
+    result = query.find()
 ```

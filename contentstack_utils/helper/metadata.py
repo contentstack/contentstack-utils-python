@@ -16,16 +16,17 @@ class Metadata:
     def __init__(self, text: str, item_type: str, item_uid: str,
                  content_type_uid: str, style_type: StyleType,
                  outer_html: str, attributes: str):
-        """Used to set the value to the variables
+        """
+        Used to set the value to the variables
 
         Args:
-            text (str): [text for embedded objects]
-            item_type (str): [item_type for embedded objects]
-            item_uid (str): [item_uid for embedded objects]
-            content_type_uid (str): [content_type_uid for embedded objects]
-            style_type (StyleType): [style_type for embedded objects]
-            outer_html (str): [outer_html for embedded objects]
-            attributes (str): [attributes for embedded objects]
+            text (str): text for embedded objects
+            item_type (str): item_type for embedded objects
+            item_uid (str): item_uid for embedded objects
+            content_type_uid (str): content_type_uid for embedded objects
+            style_type (StyleType): style_type for embedded objects
+            outer_html (str): outer_html for embedded objects
+            attributes (str): attributes for embedded objects
         """
         self.text = text
         self.item_type = item_type
@@ -37,7 +38,7 @@ class Metadata:
 
     @property
     def get_text(self):
-        """returns text for embedded objects
+        """text for embedded objects
 
         Returns:
             str : text for embedded objects
@@ -46,7 +47,7 @@ class Metadata:
 
     @property
     def get_item_type(self):
-        """returns item_type for embedded objects
+        """item_type for embedded objects
 
         Returns:
             str :  item_type for embedded objects
@@ -55,7 +56,7 @@ class Metadata:
 
     @property
     def get_item_uid(self):
-        """returns item_uid for embedded objects
+        """item_uid for embedded objects
 
         Returns:
             str : item_uid for embedded objects
@@ -64,7 +65,7 @@ class Metadata:
 
     @property
     def get_content_type_uid(self):
-        """returns content_type_uid for embedded objects
+        """content_type_uid for embedded objects
 
         Returns:
             str :  content_type_uid for embedded objects
@@ -73,7 +74,7 @@ class Metadata:
 
     @property
     def get_style_type(self) -> StyleType:
-        """returns style_type for embedded objects
+        """style_type for embedded objects
 
         Returns:
             StyleType :  style_type for embedded objects
@@ -82,7 +83,7 @@ class Metadata:
 
     @property
     def get_outer_html(self):
-        """returns outer_html for embedded objects
+        """outer_html for embedded objects
 
         Returns:
             str :  outer_html for embedded objects
@@ -91,9 +92,9 @@ class Metadata:
 
     @property
     def get_attributes(self):
-        """ returns attributes for embedded objects
+        """attributes for embedded objects
 
         Returns:
-            str :  attributes for embedded objects
+            str : attributes for embedded objects
         """
         return self.attributes
