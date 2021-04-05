@@ -144,28 +144,3 @@ def get_embedded_objects(html_doc, embedded_obj, callback):
     elements = tag.xpath("//*[contains(@class, 'embedded-asset') or contains(@class, 'embedded-entry')]")
     metadata = get_metadata(elements)
     return get_html_doc(embedded_obj, metadata, callback, html_doc)
-
-    # if '_embedded_items' in embedded_obj:
-    #     keys = extract_keys(embedded_obj['_embedded_items'])
-    #     for key in keys:
-    #         items_array = embedded_obj['_embedded_items'][key]
-    #         item = find_embedded_entry(items_array, metadata)
-    #         if item is not None:
-    #             replaceable_str = callback.render_options(item, metadata)
-    #             html_doc = html_doc.replace(metadata.outer_html, replaceable_str)
-    #             break
-    # return html_doc
-
-    # for element in elements:
-    #     content_type = None
-    #     typeof = element.attrib['type']
-    #     if typeof == 'asset':
-    #         uid = element.attrib['data-sys-asset-uid']
-    #     else:
-    #         uid = element.attrib['data-sys-entry-uid']
-    #         content_type = element.attrib['data-sys-content-type-uid']
-    #     style = element.attrib['sys-style-type']
-    #     outer_html = etree.tostring(element).decode('utf-8')
-    #     attributes = element.attrib
-    #     style = Utils.convert_style(style)
-    #     metadata = Metadata(element.text, typeof, uid, content_type, style, outer_html, attributes)
