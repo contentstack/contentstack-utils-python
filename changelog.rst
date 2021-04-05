@@ -4,9 +4,9 @@
 
 ENHANCEMENT, NEW FEATURE, BUG RESOLVE
 
-*v0.0.1*
+*v0.1.0*
 ============
 
-**Date: 20-Nov-2020**
+**Date: 02-Sept-2021**
 
- - initial release of contentstack utility package
+ - Initial release of contentstack utility package
