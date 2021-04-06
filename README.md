@@ -31,7 +31,7 @@ If you are using Contentstack Python SDK in your project by running the followin
 ## For the specific version
 
 ```python
-   pip install Contentstack==1.3.0
+   pip install Contentstack==1.4.0
 ```
 
 ## Usage
