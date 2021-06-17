@@ -12,4 +12,3 @@ def convert_style(style) -> StyleType:
         return StyleType.DISPLAY
     elif style == 'download':
         return StyleType.DOWNLOAD
-

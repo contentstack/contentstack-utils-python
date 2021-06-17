@@ -10,11 +10,6 @@ import enum
 
 
 class ItemType(enum.Enum):
-    """
-    Contains Two option for ItemsType
-
-    ENTRY
-    ASSET
-    """
+    """Contains Two option for ItemsType => ENTRY and ASSET """
     ENTRY = 'entry'
     ASSET = 'asset'

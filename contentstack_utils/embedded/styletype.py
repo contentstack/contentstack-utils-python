@@ -10,12 +10,7 @@ class StyleType(enum.Enum):
 
     """
     This StyleType contains four options like below.
-
-    BLOCK
-    INLINE
-    LINK
-    DISPLAY
-    DOWNLOAD
+    BLOCK ,INLINE ,LINK,DISPLAY,DOWNLOAD
     """
 
     BLOCK = 'block'

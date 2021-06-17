@@ -1,0 +1,43 @@
+{
+  "uid": "removed_for_security_reasons",
+  "_version": 13,
+  "attrs": {},
+  "children": [
+    {
+      "type": "p",
+      "attrs": {
+        "style": {
+          "text-align": "left"
+        },
+        "redactor-attributes": {}
+      },
+      "uid": "removed_for_security_reasons",
+      "children": [
+        {
+          "text": "",
+          "bold": true,
+          "italic": true,
+          "underline": true,
+          "subscript": true
+        },
+        {
+          "uid": "removed_for_security_reasons",
+          "type": "a",
+          "attrs": {
+            "url": "LINK.com",
+            "target": "_self"
+          },
+          "children": [
+            {
+              "text": "LINK"
+            }
+          ]
+        },
+        {
+          "text": ""
+        }
+      ]
+    }
+  ],
+  "type": "doc"
+}

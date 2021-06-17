@@ -1,0 +1,25 @@
+{
+  "uid": "removed_for_security_reasons",
+  "_version": 1,
+  "attrs": {},
+  "children": [
+    {
+      "uid": "removed_for_security_reasons",
+      "type": "reference",
+      "attrs": {
+        "display-type": "inline",
+        "entry-uid": "titleUpdateUID",
+        "content-type-uid": "embeddedrte",
+        "locale": "en-us",
+        "type": "entry",
+        "class-name": "embedded-entry"
+      },
+      "children": [
+        {
+          "text": ""
+        }
+      ]
+    }
+  ],
+  "type": "doc"
+}

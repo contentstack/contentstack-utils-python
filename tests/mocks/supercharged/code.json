@@ -1,0 +1,18 @@
+{
+  "uid": "removed_for_security_reasons",
+  "_version": 13,
+  "attrs": {},
+  "children": [
+    {
+      "uid": "removed_for_security_reasons",
+      "type": "code",
+      "attrs": {},
+      "children": [
+        {
+          "text": "Code template."
+        }
+      ]
+    }
+  ],
+  "type": "doc"
+}

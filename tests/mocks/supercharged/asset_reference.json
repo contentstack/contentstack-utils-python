@@ -1,0 +1,30 @@
+{
+  "uid": "removed_for_security_reasons",
+  "_version": 1,
+  "attrs": {},
+  "children": [
+    {
+      "uid": "removed_for_security_reasons",
+      "type": "reference",
+      "attrs": {
+        "display-type": "display",
+        "asset-uid": "keystarting44asset",
+        "content-type-uid": "sys_assets",
+        "asset-link": "https://images.contentstack.com/v3/assets/51807f919e0e4/11.jpg",
+        "asset-name": "11.jpg",
+        "asset-type": "image/jpeg",
+        "type": "asset",
+        "class-name": "embedded-asset",
+        "width": 25.16914749661705,
+        "className": "dsd",
+        "id": "sdf"
+      },
+      "children": [
+        {
+          "text": ""
+        }
+      ]
+    }
+  ],
+  "type": "doc"
+}

@@ -23,7 +23,7 @@ class TestDefaultOptOther(unittest.TestCase):
         metadata = Metadata("Hi sample entry for embedding", "entry", 'bltb5a04880fbb74f26', 'samplect',
                             StyleType.BLOCK, "this is outer html", 'samplect attributes')
         result = default_opt.render_options(dictionary, metadata)
-        self.assertEqual('<div><p>bltb5a04880fbb74f26</p><div><p>Content type: <span>samplect</span></p></div>', result)
+        self.assertEqual('<div><p>removed_for_security_reasons</p><div><p>Content type: <span>samplect</span></p></div>', result)
 
     def test_get_render_option_asset_without_title_link(self):
         to_json = read_mock_path()
@@ -38,7 +38,7 @@ class TestDefaultOptOther(unittest.TestCase):
         to_json = read_mock_path()
         dictionary = to_json[1]
         default_opt = options.Options()
-        metadata = Metadata("Hi sample entry for embedding", "entry", 'bltb5a04880fbb74f26', 'samplect',
+        metadata = Metadata("Hi sample entry for embedding", "entry", 'b5a04880fbb74f26', 'samplect',
                             StyleType.DISPLAY, "this is outer html", 'samplect attributes')
         result = default_opt.render_options(dictionary, metadata)
-        self.assertEqual('<img src=/sample-entry-one alt=bltb5a04880fbb74f26/>', result)
+        self.assertEqual('<img src=/sample-entry-one alt=removed_for_security_reasons/>', result)
