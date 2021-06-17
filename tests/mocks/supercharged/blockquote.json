@@ -1,0 +1,19 @@
+{
+  "uid": "06084d7fd",
+  "_version": 13,
+  "attrs": {},
+  "children": [
+    {
+      "uid": "removed_for_security_reasons",
+      "type": "blockquote",
+      "id": "removed_for_security_reasons",
+      "children": [
+        {
+          "text": "Praesent eu ex sed nibh venenatis pretium."
+        }
+      ],
+      "attrs": {}
+    }
+  ],
+  "type": "doc"
+}

@@ -3,8 +3,8 @@
     {
       "title": "Entry one",
       "rich_text_editor": [
-        "<p>hello</p><img class=\"embedded-asset\" data-redactor-type=\"embed\" data-widget-code=\"\" data-sys-asset-filelink=\"http://localhost:8000/v3/assets/blte964dd749943a934/blt6ba515fc6c148887/5d0b406eb0ed0f0c3d433115/dp.jpeg\" data-sys-asset-uid=\"bltba476c60baacb442\" data-sys-asset-filename=\"dp.jpeg\" data-sys-asset-contenttype=\"image/jpeg\" type=\"asset\" sys-style-type=\"display\"></img><div class=\"redactor-component embedded-entry block-entry redactor-component-active\" data-redactor-type=\"embed\" data-widget-code=\"\" data-sys-entry-uid=\"bltb5a04880fbb74f26\" data-sys-entry-locale=\"en-us\" data-sys-content-type-uid=\"samplect\" sys-style-type=\"block\" type=\"entry\"></div>\n<p>hello</p>\n<p></p>",
-        "<p>hello</p><img class=\"embedded-asset\" data-redactor-type=\"embed\" data-widget-code=\"\" data-sys-asset-filelink=\"http://localhost:8000/v3/assets/blte964dd749943a934/blt6ba515fc6c148887/5d0b406eb0ed0f0c3d433115/dp.jpeg\" data-sys-asset-uid=\"bltba476c60baacb442\" data-sys-asset-filename=\"dp.jpeg\" data-sys-asset-contenttype=\"image/jpeg\" type=\"asset\" sys-style-type=\"display\"></img><div class=\"redactor-component embedded-entry block-entry redactor-component-active\" data-redactor-type=\"embed\" data-widget-code=\"\" data-sys-entry-uid=\"bltb5a04880fbb74f26\" data-sys-entry-locale=\"en-us\" data-sys-content-type-uid=\"samplect\" sys-style-type=\"block\" type=\"entry\"></div>\n<p>hello</p>\n<p></p>"
+        "<p>hello</p><img class=\"embedded-asset\" data-redactor-type=\"embed\" data-widget-code=\"\" data-sys-asset-filelink=\"http://localhost:8000/v3/assets/dp.jpeg\" data-sys-asset-uid=\"removed_for_security_reasons\" data-sys-asset-filename=\"dp.jpeg\" data-sys-asset-contenttype=\"image/jpeg\" type=\"asset\" sys-style-type=\"display\"></img><div class=\"redactor-component embedded-entry block-entry redactor-component-active\" data-redactor-type=\"embed\" data-widget-code=\"\" data-sys-entry-uid=\"removed_for_security_reasons\" data-sys-entry-locale=\"en-us\" data-sys-content-type-uid=\"samplect\" sys-style-type=\"block\" type=\"entry\"></div>\n<p>hello</p>\n<p></p>",
+        "<p>hello</p><img class=\"embedded-asset\" data-redactor-type=\"embed\" data-widget-code=\"\" data-sys-asset-filelink=\"http://localhost:8000/v3/assets/dp.jpeg\" data-sys-asset-uid=\"removed_for_security_reasons\" data-sys-asset-filename=\"dp.jpeg\" data-sys-asset-contenttype=\"image/jpeg\" type=\"asset\" sys-style-type=\"display\"></img><div class=\"redactor-component embedded-entry block-entry redactor-component-active\" data-redactor-type=\"embed\" data-widget-code=\"\" data-sys-entry-uid=\"removed_for_security_reasons\" data-sys-entry-locale=\"en-us\" data-sys-content-type-uid=\"samplect\" sys-style-type=\"block\" type=\"entry\"></div>\n<p>hello</p>\n<p></p>"
       ],
       "_embedded_items": {
         "rich_text_editor": [
@@ -15,19 +15,19 @@
             ],
             "tags": [],
             "locale": "en-us",
-            "uid": "bltb5a04880fbb74f26",
+            "uid": "removed_for_security_reasons",
             "filename": "samplect_filename",
-            "created_by": "blt02b1ac581c14ff2f",
-            "updated_by": "blt02b1ac581c14ff2f",
+            "created_by": "02b1ac581c14ff2f",
+            "updated_by": "02b1ac581c14ff2f",
             "created_at": "2020-10-20T12:37:00.061Z",
             "updated_at": "2020-10-20T12:37:00.061Z",
             "_content_type_uid": "samplect",
             "ACL": [],
             "_version": 1,
             "_workflow": {
-              "uid": "blt2d58dc5a06eed07f",
+              "uid": "removed_for_security_reasons",
               "updated_at": "2020-10-20T12:37:00.060Z",
-              "updated_by": "blt02b1ac581c14ff2f",
+              "updated_by": "02b1ac581c14ff2f",
               "version": 1
             },
             "_in_progress": false
@@ -41,18 +41,18 @@
             ],
             "tags": [],
             "locale": "en-us",
-            "uid": "bltb5a04880fbb74f26",
-            "created_by": "blt02b1ac581c14ff2f",
-            "updated_by": "blt02b1ac581c14ff2f",
+            "uid": "removed_for_security_reasons",
+            "created_by": "02b1ac581c14ff2f",
+            "updated_by": "02b1ac581c14ff2f",
             "created_at": "2020-10-20T12:37:00.061Z",
             "updated_at": "2020-10-20T12:37:00.061Z",
             "_content_type_uid": "samplect",
             "ACL": [],
             "_version": 1,
             "_workflow": {
-              "uid": "blt2d58dc5a06eed07f",
+              "uid": "removed_for_security_reasons",
               "updated_at": "2020-10-20T12:37:00.060Z",
-              "updated_by": "blt02b1ac581c14ff2f",
+              "updated_by": "02b1ac581c14ff2f",
               "version": 1
             },
             "_in_progress": false

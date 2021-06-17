@@ -1,0 +1,1753 @@
+{
+  "_version": 23,
+  "locale": "en-us",
+  "uid": "removed_for_security_reasons",
+  "_embedded_items": {
+    "rich_text_editor": [
+      {
+        "title": "Hi sample entry for embedding",
+        "url": "/sample-entry-one",
+        "rich_text_editor": [
+          "<p>Simple text</p>"
+        ],
+        "tags": [],
+        "locale": "en-us",
+        "uid": "removed_for_security_reasons",
+        "created_by": "removed_for_security_reasons",
+        "updated_by": "removed_for_security_reasons",
+        "created_at": "2020-10-20T12:37:00.061Z",
+        "updated_at": "2020-10-20T12:37:00.061Z",
+        "_content_type_uid": "samplect",
+        "ACL": [],
+        "_version": 1,
+        "_workflow": {
+          "uid": "removed_for_security_reasons",
+          "updated_at": "2020-10-20T12:37:00.060Z",
+          "updated_by": "02b1ac581c14ff2f",
+          "version": 1
+        },
+        "_in_progress": false
+      },
+      {
+        "uid": "removed_for_security_reasons",
+        "content_type": "image/jpeg",
+        "file_size": "11773",
+        "tags": [],
+        "filename": "11.jpg",
+        "url": "https://images.contentstack.com/v3/assets/11.jpg",
+        "ACL": [],
+        "parent_uid": null,
+        "_version": 2,
+        "title": "11.jpg",
+        "description": "dddd",
+        "_content_type_uid": "sys_assets"
+      },
+      {
+        "uid": "removed_for_security_reasons",
+        "created_at": "2020-10-06T13:23:54.459Z",
+        "updated_at": "2020-10-30T06:33:24.861Z",
+        "created_by": "removed_for_security_reasons",
+        "updated_by": "removed_for_security_reasons",
+        "content_type": "image/jpeg",
+        "file_size": "10126",
+        "tags": [],
+        "filename": "mickey.jpg",
+        "url": "http://localhost:8000/v3/assets/mickey.jpg",
+        "ACL": [
+          {
+            "k": "others",
+            "v": {
+              "read": false,
+              "create": false,
+              "update": false,
+              "delete": false,
+              "sub_acl": {
+                "read": false,
+                "create": false,
+                "update": false,
+                "delete": false,
+                "publish": false
+              }
+            }
+          },
+          {
+            "k": "roles.",
+            "v": {
+              "k": "others",
+              "v": {
+                "read": false,
+                "create": false,
+                "update": false,
+                "delete": false,
+                "sub_acl": {
+                  "read": false,
+                  "create": false,
+                  "update": false,
+                  "delete": false,
+                  "publish": false
+                }
+              }
+            }
+          },
+          {
+            "k": "roles.",
+            "v": {
+              "k": "roles.",
+              "v": {
+                "k": "others",
+                "v": {
+                  "read": false,
+                  "create": false,
+                  "update": false,
+                  "delete": false,
+                  "sub_acl": {
+                    "read": false,
+                    "create": false,
+                    "update": false,
+                    "delete": false,
+                    "publish": false
+                  }
+                }
+              }
+            }
+          }
+        ],
+        "parent_uid": "removed_for_security_reasons",
+        "_version": 6,
+        "title": "mickey.jpg",
+        "description": "",
+        "_content_type_uid": "sys_assets"
+      }
+    ]
+  },
+  "created_at": "2020-10-06T08:17:56.955Z",
+  "created_by": "removed_for_security_reasons",
+  "global_rich": {
+    "rich_text_editor": "<p><a data-sys-entry-uid=\"removed_for_security_reasons\" data-sys-entry-locale=\"en-us\" data-sys-content-type-uid=\"00_suraj\" sys-style-type=\"link\" data-sys-can-edit=\"true\" class=\"embedded-entry\" type=\"entry\" href=\"/suraj-123-entry\" title=\"Manish New entry\">Global</a></p>",
+    "rich_text_editor_multiple": [
+      "<p>global 2<a data-sys-entry-uid=\"49af3673cdd268a5\" data-sys-entry-locale=\"en-us\" data-sys-content-type-uid=\"0_solve\" sys-style-type=\"link\" data-sys-can-edit=\"true\" class=\"embedded-entry\" type=\"entry\" href=\"/untitledsas\" title=\"Untitledsas\">Global</a></p>"
+    ],
+    "group": {
+      "rich_text_editor": "<div class=\"redactor-component embedded-entry block-entry redactor-component-active\" data-redactor-type=\"embed\" data-widget-code=\"\" data-sys-entry-uid=\"1c9e75e3608f8c6b\" data-sys-entry-locale=\"en-us\" data-sys-content-type-uid=\"0_solve\" data-sys-can-edit=\"true\" sys-style-type=\"block\" type=\"entry\"></div>\n<p>Global group 1</p>",
+      "rich_text_editor_multiple": [
+        "<p><span class=\"redactor-component embedded-entry inline-entry\" data-redactor-type=\"embed\" data-widget-code=\"\" data-sys-entry-uid=\"1c9e75e3608f8c6b\" data-sys-entry-locale=\"en-us\" data-sys-content-type-uid=\"0_solve\" data-sys-can-edit=\"true\" sys-style-type=\"inline\" type=\"entry\"></span></p>"
+      ]
+    },
+    "modular_blocks": [
+      {
+        "rich_in_modular": {
+          "rich_text_editor": "<p>global&nbsp;</p><figure class=\"embedded-asset\" data-redactor-type=\"embed\" data-widget-code=\"\" data-sys-asset-filelink=\"https://dev16-images.contentstack.com/v3/assets/removed_for_security_reasons/removed_for_security_reasons/removed_for_security_reasons/11.jpg\" data-sys-asset-uid=\"removed_for_security_reasons\" data-sys-asset-filename=\"11.jpg\" data-sys-asset-contenttype=\"image/jpeg\" type=\"asset\" sys-style-type=\"display\"></figure>\n<p> modular 1</p>",
+          "_metadata": {
+            "uid": "removed_for_security_reasons"
+          },
+          "rich_text_editor_multiple": [
+            "<p>global modular 2<span class=\"redactor-component embedded-entry inline-entry\" data-redactor-type=\"embed\" data-widget-code=\"\" data-sys-entry-uid=\"2fcbb159a2a4c216\" data-sys-entry-locale=\"en-us\" data-sys-content-type-uid=\"0_bug_1\" data-sys-can-edit=\"true\" sys-style-type=\"inline\" type=\"entry\"></span></p>"
+          ]
+        }
+      }
+    ]
+  },
+  "global_rich_multiple": [
+    {
+      "rich_text_editor": "<p>Global <a data-sys-entry-uid=\"removed_for_security_reasons\" data-sys-entry-locale=\"en-us\" data-sys-content-type-uid=\"00_suraj\" sys-style-type=\"link\" data-sys-can-edit=\"true\" class=\"embedded-entry\" type=\"entry\" href=\"/copy-of-suraj-123-entry\" title=\"Copy of Suraj 123 Entry\">multiple</a> 1</p>",
+      "_metadata": {
+        "uid": "removed_for_security_reasons"
+      },
+      "rich_text_editor_multiple": [
+        "<p>Global multiple 2<span class=\"redactor-component embedded-entry inline-entry\" data-redactor-type=\"embed\" data-widget-code=\"\" data-sys-entry-uid=\"49af3673cdd268a5\" data-sys-entry-locale=\"en-us\" data-sys-content-type-uid=\"0_solve\" data-sys-can-edit=\"true\" sys-style-type=\"inline\" type=\"entry\"></span></p>"
+      ],
+      "group": {
+        "rich_text_editor": "<p>Global multiple group 1</p>\n<figure class=\"embedded-asset\" data-sys-asset-filelink=\"https://dev16-images.contentstack.com/v3/assets/11.jpg\" data-sys-asset-uid=\"7324a68403ee7281\" data-sys-asset-filename=\"11.jpg\" data-sys-asset-contenttype=\"image/jpeg\" type=\"asset\" sys-style-type=\"display\"></figure>",
+        "rich_text_editor_multiple": [
+          "<p>Global multiple group 2</p>\n<figure class=\"embedded-asset\" data-sys-asset-filelink=\"https://dev16-images.contentstack.com/v3/assets/11.jpg\" data-sys-asset-uid=\"7324a68403ee7281\" data-sys-asset-filename=\"11.jpg\" data-sys-asset-contenttype=\"image/jpeg\" type=\"asset\" sys-style-type=\"display\"></figure>"
+        ]
+      },
+      "modular_blocks": [
+        {
+          "rich_in_modular": {
+            "rich_text_editor": "<p><a data-sys-entry-uid=\"removed_for_security_reasons\" data-sys-entry-locale=\"en-us\" data-sys-content-type-uid=\"0_solve\" sys-style-type=\"link\" data-sys-can-edit=\"true\" class=\"embedded-entry\" type=\"entry\" href=\"/untitled\" title=\"Entry 001 123\">Global multiple modular 1</a></p>",
+            "_metadata": {
+              "uid": "removed_for_security_reasons"
+            },
+            "rich_text_editor_multiple": [
+              "<p>Global multiple modular</p><figure class=\"embedded-asset\" data-redactor-type=\"embed\" data-widget-code=\"\" data-sys-asset-filelink=\"https://dev16-images.contentstack.com/v3/assets/11.jpg\" data-sys-asset-uid=\"7324a68403ee7281\" data-sys-asset-filename=\"11.jpg\" data-sys-asset-contenttype=\"image/jpeg\" type=\"asset\" sys-style-type=\"display\"></figure>\n<p> 2</p>"
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "group": {
+    "rich_text_editor": "<p>Group 1<span class=\"redactor-component embedded-entry inline-entry\" data-redactor-type=\"embed\" data-widget-code=\"\" data-sys-entry-uid=\"41a3bf40728446c3\" data-sys-entry-locale=\"en-us\" data-sys-content-type-uid=\"00_suraj\" data-sys-can-edit=\"true\" sys-style-type=\"inline\" type=\"entry\"></span></p>",
+    "rich_text_editor_multiple": [
+      "<p>Gro <a data-sys-entry-uid=\"f2fb45e5fc46f8d4\" data-sys-entry-locale=\"en-us\" data-sys-content-type-uid=\"00_suraj_final\" sys-style-type=\"link\" data-sys-can-edit=\"true\" class=\"embedded-entry\" type=\"entry\" href=\"/copy-of-entry-final-02\" title=\"Copy of Entry final\" target=\"_blank\">/copy-of-entry-final-01</a>up 2</p>"
+    ]
+  },
+  "modular_blocks": [
+    {
+      "rich_text_inmodular": {
+        "rich_text_editor": "<div class=\"redactor-component embedded-entry block-entry redactor-component-active\" data-redactor-type=\"embed\" data-widget-code=\"\" data-sys-entry-uid=\"f2fb45e5fc46f8d4\" data-sys-entry-locale=\"en-us\" data-sys-content-type-uid=\"00_suraj_final\" data-sys-can-edit=\"true\" sys-style-type=\"block\" type=\"entry\"></div>\n<p>Modul 1</p>",
+        "_metadata": {
+          "uid": "removed_for_security_reasons"
+        },
+        "rich_text_editor_multiple": [
+          "<p>module 2&nbsp;</p>\n<figure class=\"embedded-asset\" data-sys-asset-filelink=\"https://dev16-images.contentstack.com/v3/assets/11.jpg\" data-sys-asset-uid=\"7324a68403ee7281\" data-sys-asset-filename=\"11.jpg\" data-sys-asset-contenttype=\"image/jpeg\" type=\"asset\" sys-style-type=\"display\"></figure>"
+        ]
+      }
+    },
+    {
+      "global_modular": {
+        "rich_text_editor": "<p><a data-sys-entry-uid=\"removed_for_security_reasons\" data-sys-entry-locale=\"en-us\" data-sys-content-type-uid=\"0_solve\" sys-style-type=\"link\" data-sys-can-edit=\"true\" class=\"embedded-entry\" type=\"entry\" href=\"/entry-1\" title=\"Entry 1\">Global</a> 1</p>",
+        "_metadata": {
+          "uid": "removed_for_security_reasons"
+        },
+        "rich_text_editor_multiple": [
+          "<p>Global 2<span class=\"redactor-component embedded-entry inline-entry\" data-redactor-type=\"embed\" data-widget-code=\"\" data-sys-entry-uid=\"1c9e75e3608f8c6b\" data-sys-entry-locale=\"en-us\" data-sys-content-type-uid=\"0_solve\" data-sys-can-edit=\"true\" sys-style-type=\"inline\" type=\"entry\"></span></p>"
+        ],
+        "group": {
+          "rich_text_editor": "<p>Global group 1</p><div class=\"redactor-component embedded-entry block-entry redactor-component-active\" data-redactor-type=\"embed\" data-widget-code=\"\" data-sys-entry-uid=\"92875864eb2678c6\" data-sys-entry-locale=\"en-us\" data-sys-content-type-uid=\"0_bug_1\" data-sys-can-edit=\"true\" sys-style-type=\"block\" type=\"entry\"></div>",
+          "rich_text_editor_multiple": [
+            "<p>Global <a data-sys-entry-uid=\"92875864eb2678c6\" data-sys-entry-locale=\"en-us\" data-sys-content-type-uid=\"0_bug_1\" sys-style-type=\"link\" data-sys-can-edit=\"true\" class=\"embedded-entry\" type=\"entry\" href=\"/kitee\" title=\"kitee\">Global</a> 2</p>"
+          ]
+        },
+        "modular_blocks": [
+          {
+            "rich_in_modular": {
+              "rich_text_editor": "<p><a data-sys-entry-uid=\"removed_for_security_reasons\" data-sys-entry-locale=\"en-us\" data-sys-content-type-uid=\"00_copy_of_00_suraj\" sys-style-type=\"link\" data-sys-can-edit=\"true\" class=\"embedded-entry\" type=\"entry\" href=\"/entry-11-00-suraj\" title=\"Entry 11 00 Suraj\">Global</a> 1</p>",
+              "_metadata": {
+                "uid": "removed_for_security_reasons"
+              },
+              "rich_text_editor_multiple": [
+                "<p>Module 2</p><div class=\"redactor-component embedded-entry block-entry redactor-component-active\" data-redactor-type=\"embed\" data-widget-code=\"\" data-sys-entry-uid=\"49af3673cdd268a5\" data-sys-entry-locale=\"en-us\" data-sys-content-type-uid=\"0_solve\" data-sys-can-edit=\"true\" sys-style-type=\"block\" type=\"entry\"></div>"
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "rich_text_editor": "<div data-redactor-type=\"embed\" type=\"entry\" data-sys-can-edit=\"true\" class=\"redactor-component embedded-entry block-entry\" data-sys-entry-uid=\"41a3bf40728446c3\" data-sys-entry-locale=\"en-us\" data-sys-content-type-uid=\"00_suraj\" sys-style-type=\"block\"></div><p>one</p><figure type=\"asset\" sys-style-type=\"display\" class=\"embedded-asset\" content-type-uid=\"sys_assets\" data-sys-asset-filelink=\"https://dev16-images.contentstack.com/v3/assets/iphone-mockup.png\" data-sys-asset-uid=\"120a5a04d91c9466\" data-sys-asset-filename=\"iphone-mockup.png\" data-sys-asset-contenttype=\"image/png\"></figure>",
+  "rich_text_editor_multiple": [
+    "<p>Two</p>\n<img data-image=\"akofs65z4070\" src=\"https://dev16-images.contentstack.com/v3/assets/11.jpg\" data-sys-asset-uid=\"7324a68403ee7281\" alt=\"11.jpg\">"
+  ],
+  "supercharged_rt": {
+    "uid": "removed_for_security_reasons",
+    "_version": 13,
+    "attrs": {},
+    "children": [
+      {
+        "uid": "removed_for_security_reasons",
+        "type": "reference",
+        "attrs": {
+          "display-type": "display",
+          "asset-uid": "44asset",
+          "content-type-uid": "sys_assets",
+          "asset-link": "https://images.contentstack.com/v3/assets/77263d3e6b/73403ee7281/51807f919e0e4/11.jpg",
+          "asset-name": "11.jpg",
+          "asset-type": "image/jpeg",
+          "type": "asset",
+          "class-name": "embedded-asset",
+          "width": 25.16914749661705,
+          "className": "dsd",
+          "id": "sdf"
+        },
+        "children": [
+          {
+            "text": ""
+          }
+        ]
+      }
+    ],
+    "type": "doc"
+  },
+  "supercharged_rte": {
+    "uid": "removed_for_security_reasons",
+    "attrs": {
+      "rows": 2,
+      "cols": 2,
+      "colWidths": [
+        250,
+        250
+      ]
+    },
+    "children": [
+      {
+        "type": "p",
+        "attrs": {},
+        "uid": "removed_for_security_reasons",
+        "children": [
+          {
+            "text": "scsdfadf"
+          }
+        ]
+      },
+      {
+        "type": "p",
+        "attrs": {},
+        "uid": "removed_for_security_reasons",
+        "children": [
+          {
+            "text": "sdfadsfbnsd"
+          }
+        ]
+      },
+      {
+        "type": "p",
+        "attrs": {},
+        "uid": "removed_for_security_reasons",
+        "children": [
+          {
+            "text": "sadfdf",
+            "bold": true
+          },
+          {
+            "text": "sad fads",
+            "bold": true,
+            "italic": true
+          },
+          {
+            "text": "sad fasdfas dfadsf",
+            "bold": true,
+            "italic": true,
+            "underline": true
+          },
+          {
+            "text": "ssdfsdfad ",
+            "bold": true,
+            "italic": true,
+            "underline": true,
+            "strikethrough": true
+          },
+          {
+            "text": "sadf asdf ",
+            "bold": true,
+            "italic": true,
+            "underline": true,
+            "inlineCode": true
+          },
+          {
+            "text": "  sadfasdfasd ",
+            "bold": true,
+            "italic": true,
+            "underline": true,
+            "superscript": true
+          },
+          {
+            "text": " sadfasdf. ",
+            "bold": true,
+            "italic": true,
+            "underline": true,
+            "subscript": true
+          }
+        ]
+      },
+      {
+        "type": "p",
+        "attrs": {
+          "className": "id",
+          "id": "di"
+        },
+        "uid": "removed_for_security_reasons",
+        "children": [
+          {
+            "text": "",
+            "bold": true,
+            "italic": true,
+            "underline": true,
+            "subscript": true
+          }
+        ]
+      },
+      {
+        "type": "h1",
+        "attrs": {},
+        "uid": "removed_for_security_reasons",
+        "children": [
+          {
+            "text": "sdf ",
+            "bold": true,
+            "italic": true,
+            "underline": true,
+            "subscript": true
+          }
+        ]
+      },
+      {
+        "type": "h2",
+        "attrs": {},
+        "uid": "removed_for_security_reasons",
+        "children": [
+          {
+            "text": "sadfdsf",
+            "bold": true,
+            "italic": true,
+            "underline": true,
+            "subscript": true
+          }
+        ]
+      },
+      {
+        "type": "h3",
+        "attrs": {},
+        "uid": "removed_for_security_reasons",
+        "children": [
+          {
+            "text": "as dfasdf",
+            "bold": true,
+            "italic": true,
+            "underline": true,
+            "subscript": true
+          }
+        ]
+      },
+      {
+        "type": "h3",
+        "attrs": {
+          "style": {
+            "text-align": "left"
+          },
+          "redactor-attributes": {}
+        },
+        "uid": "removed_for_security_reasons",
+        "children": [
+          {
+            "text": "sa fd",
+            "bold": true,
+            "italic": true,
+            "underline": true,
+            "subscript": true
+          }
+        ]
+      },
+      {
+        "type": "h3",
+        "attrs": {
+          "style": {
+            "text-align": "center"
+          },
+          "redactor-attributes": {}
+        },
+        "uid": "removed_for_security_reasons",
+        "children": [
+          {
+            "text": "sda fasdfasd",
+            "bold": true,
+            "italic": true,
+            "underline": true,
+            "subscript": true
+          }
+        ]
+      },
+      {
+        "type": "h3",
+        "attrs": {
+          "style": {
+            "text-align": "right"
+          },
+          "redactor-attributes": {}
+        },
+        "uid": "removed_for_security_reasons",
+        "children": [
+          {
+            "text": "s dafsdfsdfasd ",
+            "bold": true,
+            "italic": true,
+            "underline": true,
+            "subscript": true
+          }
+        ]
+      },
+      {
+        "type": "h3",
+        "attrs": {
+          "style": {
+            "text-align": "justify"
+          },
+          "redactor-attributes": {}
+        },
+        "uid": "removed_for_security_reasons",
+        "children": [
+          {
+            "text": "sdfawsdfasd sdfasd s adfasdfasdf asdf asdf sadf",
+            "bold": true,
+            "italic": true,
+            "underline": true,
+            "subscript": true
+          }
+        ]
+      },
+      {
+        "type": "h3",
+        "attrs": {
+          "style": {
+            "text-align": "justify"
+          },
+          "redactor-attributes": {}
+        },
+        "uid": "removed_for_security_reasons",
+        "children": [
+          {
+            "text": "as dfasdf",
+            "bold": true,
+            "italic": true,
+            "underline": true,
+            "subscript": true
+          }
+        ]
+      },
+      {
+        "type": "h3",
+        "attrs": {
+          "style": {
+            "text-align": "justify"
+          },
+          "redactor-attributes": {}
+        },
+        "uid": "removed_for_security_reasons",
+        "children": [
+          {
+            "text": " asd",
+            "bold": true,
+            "italic": true,
+            "underline": true,
+            "subscript": true
+          }
+        ]
+      },
+      {
+        "type": "h3",
+        "attrs": {
+          "style": {
+            "text-align": "justify"
+          },
+          "redactor-attributes": {}
+        },
+        "uid": "removed_for_security_reasons",
+        "children": [
+          {
+            "text": "fasd fasd",
+            "bold": true,
+            "italic": true,
+            "underline": true,
+            "subscript": true
+          }
+        ]
+      },
+      {
+        "type": "h3",
+        "attrs": {
+          "style": {
+            "text-align": "justify"
+          },
+          "redactor-attributes": {}
+        },
+        "uid": "removed_for_security_reasons",
+        "children": [
+          {
+            "text": "sad fasdf",
+            "bold": true,
+            "italic": true,
+            "underline": true,
+            "subscript": true
+          }
+        ]
+      },
+      {
+        "uid": "removed_for_security_reasons",
+        "type": "ol",
+        "children": [
+          {
+            "type": "li",
+            "attrs": {
+              "style": {
+                "text-align": "justify"
+              },
+              "redactor-attributes": {}
+            },
+            "uid": "removed_for_security_reasons",
+            "children": [
+              {
+                "text": "sad fsadf"
+              }
+            ]
+          },
+          {
+            "type": "li",
+            "attrs": {
+              "style": {
+                "text-align": "justify"
+              },
+              "redactor-attributes": {}
+            },
+            "uid": "removed_for_security_reasons",
+            "children": [
+              {
+                "text": "as df"
+              }
+            ]
+          },
+          {
+            "type": "li",
+            "attrs": {
+              "style": {
+                "text-align": "justify"
+              },
+              "redactor-attributes": {}
+            },
+            "uid": "removed_for_security_reasons",
+            "children": [
+              {
+                "text": "as df"
+              }
+            ]
+          },
+          {
+            "type": "li",
+            "attrs": {
+              "style": {
+                "text-align": "justify"
+              },
+              "redactor-attributes": {}
+            },
+            "uid": "removed_for_security_reasons",
+            "children": [
+              {
+                "text": "s df"
+              }
+            ]
+          }
+        ],
+        "id": "removed_for_security_reasons",
+        "attrs": {}
+      },
+      {
+        "uid": "removed_for_security_reasons",
+        "type": "ul",
+        "children": [
+          {
+            "uid": "removed_for_security_reasons",
+            "type": "li",
+            "children": [
+              {
+                "text": "s dfadfsa dfsadf"
+              }
+            ],
+            "attrs": {}
+          },
+          {
+            "uid": "removed_for_security_reasons",
+            "type": "li",
+            "children": [
+              {
+                "text": " asdf"
+              }
+            ],
+            "attrs": {}
+          },
+          {
+            "uid": "removed_for_security_reasons",
+            "type": "li",
+            "children": [
+              {
+                "text": "as df"
+              }
+            ],
+            "attrs": {}
+          },
+          {
+            "uid": "removed_for_security_reasons",
+            "type": "li",
+            "children": [
+              {
+                "text": " sadf"
+              }
+            ],
+            "attrs": {}
+          }
+        ],
+        "id": "removed_for_security_reasons",
+        "attrs": {}
+      },
+      {
+        "uid": "removed_for_security_reasons",
+        "type": "p",
+        "children": [
+          {
+            "text": ""
+          }
+        ],
+        "attrs": {}
+      },
+      {
+        "uid": "removed_for_security_reasons",
+        "type": "img",
+        "attrs": {
+          "url": "https://dev16-images.contentstack.com/v3/assets/removed_for_security_reasons/removed_for_security_reasons/removed_for_security_reasons/Donald.jog.png",
+          "width": 33.69418132611637,
+          "height": "auto",
+          "redactor-attributes": {
+            "asset_uid": "removed_for_security_reasons"
+          }
+        },
+        "children": [
+          {
+            "text": ""
+          }
+        ]
+      },
+      {
+        "uid": "removed_for_security_reasons",
+        "type": "p",
+        "id": "removed_for_security_reasons",
+        "children": [
+          {
+            "text": ""
+          }
+        ],
+        "attrs": {}
+      },
+      {
+        "uid": "removed_for_security_reasons",
+        "type": "table",
+        "attrs": {
+          "rows": 4,
+          "cols": 2,
+          "colWidths": [
+            250,
+            250
+          ]
+        },
+        "children": [
+          {
+            "uid": "removed_for_security_reasons",
+            "type": "thead",
+            "attrs": {},
+            "children": [
+              {
+                "type": "tr",
+                "attrs": {},
+                "children": [
+                  {
+                    "type": "th",
+                    "attrs": {},
+                    "children": [
+                      {
+                        "type": "p",
+                        "attrs": {},
+                        "children": [
+                          {
+                            "text": "as dfa"
+                          }
+                        ],
+                        "uid": "removed_for_security_reasons"
+                      }
+                    ],
+                    "uid": "removed_for_security_reasons"
+                  },
+                  {
+                    "type": "th",
+                    "attrs": {},
+                    "children": [
+                      {
+                        "type": "p",
+                        "attrs": {},
+                        "children": [
+                          {
+                            "text": "a sdfa"
+                          }
+                        ],
+                        "uid": "removed_for_security_reasons"
+                      }
+                    ],
+                    "uid": "removed_for_security_reasons"
+                  }
+                ],
+                "uid": "removed_for_security_reasons"
+              }
+            ]
+          },
+          {
+            "type": "tbody",
+            "attrs": {},
+            "children": [
+              {
+                "type": "tr",
+                "attrs": {},
+                "children": [
+                  {
+                    "type": "td",
+                    "attrs": {},
+                    "children": [
+                      {
+                        "type": "p",
+                        "attrs": {},
+                        "children": [
+                          {
+                            "text": "sa df"
+                          }
+                        ],
+                        "uid": "removed_for_security_reasons"
+                      }
+                    ],
+                    "uid": "removed_for_security_reasons"
+                  },
+                  {
+                    "type": "td",
+                    "attrs": {},
+                    "children": [
+                      {
+                        "type": "p",
+                        "attrs": {},
+                        "children": [
+                          {
+                            "text": "s adf"
+                          }
+                        ],
+                        "uid": "removed_for_security_reasons"
+                      }
+                    ],
+                    "uid": "removed_for_security_reasons"
+                  }
+                ],
+                "uid": "removed_for_security_reasons"
+              },
+              {
+                "type": "tr",
+                "attrs": {},
+                "children": [
+                  {
+                    "type": "td",
+                    "attrs": {},
+                    "children": [
+                      {
+                        "type": "p",
+                        "attrs": {},
+                        "children": [
+                          {
+                            "text": " asdf"
+                          }
+                        ],
+                        "uid": "removed_for_security_reasons"
+                      }
+                    ],
+                    "uid": "removed_for_security_reasons"
+                  },
+                  {
+                    "type": "td",
+                    "attrs": {},
+                    "children": [
+                      {
+                        "type": "p",
+                        "attrs": {},
+                        "children": [
+                          {
+                            "text": " asdf"
+                          }
+                        ],
+                        "uid": "removed_for_security_reasons"
+                      }
+                    ],
+                    "uid": "removed_for_security_reasons"
+                  }
+                ],
+                "uid": "removed_for_security_reasons"
+              }
+            ],
+            "uid": "removed_for_security_reasons"
+          }
+        ]
+      },
+      {
+        "uid": "removed_for_security_reasons",
+        "type": "p",
+        "attrs": {},
+        "children": [
+          {
+            "text": ""
+          }
+        ]
+      },
+      {
+        "uid": "removed_for_security_reasons",
+        "type": "reference",
+        "attrs": {
+          "display-type": "asset",
+          "asset-uid": "removed_for_security_reasons",
+          "content-type-uid": "sys_assets",
+          "asset-link": "https://dev16-images.contentstack.com/v3/assets/removed_for_security_reasons/removed_for_security_reasons/removed_for_security_reasons/11.jpg",
+          "asset-name": "11.jpg",
+          "asset-type": "image/jpeg",
+          "type": "asset",
+          "class-name": "embedded-asset",
+          "width": 25.16914749661705,
+          "className": "dsd",
+          "id": "sdf"
+        },
+        "children": [
+          {
+            "text": ""
+          }
+        ]
+      },
+      {
+        "uid": "removed_for_security_reasons",
+        "type": "blockquote",
+        "id": "removed_for_security_reasons",
+        "children": [
+          {
+            "text": "dsfdafasdf"
+          }
+        ],
+        "attrs": {}
+      },
+      {
+        "uid": "removed_for_security_reasons",
+        "type": "code",
+        "attrs": {},
+        "children": [
+          {
+            "text": "sdfasdf"
+          }
+        ]
+      },
+      {
+        "uid": "removed_for_security_reasons",
+        "type": "hr",
+        "children": [
+          {
+            "text": ""
+          }
+        ],
+        "attrs": {}
+      },
+      {
+        "type": "p",
+        "attrs": {
+          "style": {
+            "text-align": "left"
+          },
+          "redactor-attributes": {}
+        },
+        "uid": "removed_for_security_reasons",
+        "children": [
+          {
+            "text": "",
+            "bold": true,
+            "italic": true,
+            "underline": true,
+            "subscript": true
+          },
+          {
+            "uid": "removed_for_security_reasons",
+            "type": "a",
+            "attrs": {
+              "url": "LINK.com",
+              "target": "_self"
+            },
+            "children": [
+              {
+                "text": "LINK"
+              }
+            ]
+          },
+          {
+            "text": ""
+          }
+        ]
+      },
+      {
+        "type": "h3",
+        "attrs": {
+          "style": {
+            "text-align": "right"
+          },
+          "redactor-attributes": {}
+        },
+        "uid": "removed_for_security_reasons",
+        "children": [
+          {
+            "text": "as dfas",
+            "bold": true,
+            "italic": true,
+            "underline": true,
+            "subscript": true
+          }
+        ]
+      },
+      {
+        "uid": "removed_for_security_reasons",
+        "type": "embed",
+        "attrs": {
+          "url": "https://www.youtube.com/watch?v=AOP0yARiW8U"
+        },
+        "children": [
+          {
+            "text": ""
+          }
+        ]
+      },
+      {
+        "type": "h3",
+        "attrs": {
+          "style": {
+            "text-align": "left"
+          },
+          "redactor-attributes": {}
+        },
+        "uid": "removed_for_security_reasons",
+        "children": [
+          {
+            "text": "",
+            "bold": true,
+            "italic": true,
+            "underline": true,
+            "subscript": true
+          },
+          {
+            "uid": "removed_for_security_reasons",
+            "type": "reference",
+            "attrs": {
+              "target": "_self",
+              "href": "/copy-of-entry-final-02",
+              "display-type": "link",
+              "entry-uid": "removed_for_security_reasons",
+              "content-type-uid": "00_suraj_final",
+              "locale": "en-us",
+              "type": "entry",
+              "class-name": "embedded-entry"
+            },
+            "children": [
+              {
+                "text": "/copy-of-entry-final-02"
+              }
+            ]
+          },
+          {
+            "text": ""
+          },
+          {
+            "uid": "removed_for_security_reasons",
+            "type": "reference",
+            "attrs": {
+              "display-type": "inline",
+              "entry-uid": "removed_for_security_reasons",
+              "content-type-uid": "00_suraj",
+              "locale": "en-us",
+              "type": "entry",
+              "class-name": "embedded-entry"
+            },
+            "children": [
+              {
+                "text": ""
+              }
+            ]
+          },
+          {
+            "text": ""
+          }
+        ]
+      },
+      {
+        "uid": "removed_for_security_reasons",
+        "type": "reference",
+        "attrs": {
+          "display-type": "block",
+          "entry-uid": "removed_for_security_reasons",
+          "content-type-uid": "00_copy_of_00_suraj",
+          "locale": "en-us",
+          "type": "entry",
+          "class-name": "embedded-entry"
+        },
+        "children": [
+          {
+            "text": ""
+          }
+        ]
+      }
+    ],
+    "type": "doc",
+    "_version": 23
+  },
+  "plaintext": {
+    "uid": "removed_for_security_reasons",
+    "_version": 13,
+    "attrs": {},
+    "children": [
+      {
+        "text": "Aliquam sit amet libero dapibus, eleifend ligula at, varius justo",
+        "bold": true
+      },
+      {
+        "text": "Lorem ipsum",
+        "bold": true,
+        "italic": true
+      },
+      {
+        "text": "dolor sit amet",
+        "bold": true,
+        "italic": true,
+        "underline": true
+      },
+      {
+        "text": "consectetur adipiscing elit.",
+        "bold": true,
+        "italic": true,
+        "underline": true,
+        "strikethrough": true
+      },
+      {
+        "text": "Sed condimentum iaculis magna in vehicula. ",
+        "bold": true,
+        "italic": true,
+        "underline": true,
+        "inlineCode": true
+      },
+      {
+        "text": "  Vestibulum vitae convallis ",
+        "bold": true,
+        "italic": true,
+        "underline": true,
+        "superscript": true
+      },
+      {
+        "text": " lacus. ",
+        "bold": true,
+        "italic": true,
+        "underline": true,
+        "subscript": true
+      }
+    ],
+    "type": "doc"
+  },
+  "plaintext_array": [
+    {
+      "uid": "removed_for_security_reasons",
+      "_version": 13,
+      "attrs": {},
+      "children": [
+        {
+          "text": "Aliquam sit amet libero dapibus, eleifend ligula at, varius justo",
+          "bold": true
+        },
+        {
+          "text": "Lorem ipsum",
+          "bold": true,
+          "italic": true
+        },
+        {
+          "text": "dolor sit amet",
+          "bold": true,
+          "italic": true,
+          "underline": true
+        },
+        {
+          "text": "consectetur adipiscing elit.",
+          "bold": true,
+          "italic": true,
+          "underline": true,
+          "strikethrough": true
+        },
+        {
+          "text": "Sed condimentum iaculis magna in vehicula. ",
+          "bold": true,
+          "italic": true,
+          "underline": true,
+          "inlineCode": true
+        },
+        {
+          "text": "  Vestibulum vitae convallis ",
+          "bold": true,
+          "italic": true,
+          "underline": true,
+          "superscript": true
+        },
+        {
+          "text": " lacus. ",
+          "bold": true,
+          "italic": true,
+          "underline": true,
+          "subscript": true
+        }
+      ],
+      "type": "doc"
+    }
+  ],
+  "paragraph": {
+    "uid": "0d7fd",
+    "_version": 13,
+    "attrs": {},
+    "children": [
+      {
+        "type": "p",
+        "attrs": {},
+        "uid": "removed_for_security_reasons",
+        "children": [
+          {
+            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed condimentum iaculis magna in vehicula. Vestibulum vitae convallis lacus. Praesent a diam iaculis turpis rhoncus faucibus. Aliquam sed pulvinar sem."
+          }
+        ]
+      }
+    ],
+    "type": "doc"
+  },
+  "h_one": {
+    "uid": "removed_for_security_reasons",
+    "_version": 13,
+    "attrs": {},
+    "children": [
+      {
+        "type": "h1",
+        "attrs": {},
+        "uid": "removed_for_security_reasons",
+        "children": [
+          {
+            "text": "Lorem ipsum dolor sit amet.",
+            "bold": true,
+            "italic": true,
+            "underline": true,
+            "subscript": true
+          }
+        ]
+      }
+    ],
+    "type": "doc"
+  },
+  "h_two": {
+    "uid": "removed_for_security_reasons",
+    "_version": 13,
+    "attrs": {},
+    "children": [
+      {
+        "type": "h2",
+        "attrs": {},
+        "uid": "removed_for_security_reasons",
+        "children": [
+          {
+            "text": "Vestibulum a ligula eget massa sagittis aliquam sit amet quis tortor. ",
+            "bold": true,
+            "italic": true,
+            "underline": true,
+            "subscript": true
+          }
+        ]
+      }
+    ],
+    "type": "doc"
+  },
+  "h_three": {
+    "uid": "removed_for_security_reasons",
+    "_version": 13,
+    "attrs": {},
+    "children": [
+      {
+        "type": "h3",
+        "attrs": {},
+        "uid": "removed_for_security_reasons",
+        "children": [
+          {
+            "text": "Mauris venenatis dui id massa sollicitudin, non bibendum nunc dictum.",
+            "bold": true,
+            "italic": true,
+            "underline": true,
+            "subscript": true
+          }
+        ]
+      }
+    ],
+    "type": "doc"
+  },
+  "h_four": {
+    "uid": "removed_for_security_reasons",
+    "_version": 13,
+    "attrs": {
+      "style": {
+        "text-align": "center"
+      },
+      "redactor-attributes": {}
+    },
+    "children": [
+      {
+        "type": "h4",
+        "attrs": {},
+        "uid": "removed_for_security_reasons",
+        "children": [
+          {
+            "text": "MaNullam feugiat turpis quis elit interdum, vitae laoreet quam viverra",
+            "bold": true,
+            "italic": true,
+            "underline": true,
+            "subscript": true
+          }
+        ]
+      }
+    ],
+    "type": "doc"
+  },
+  "h_five": {
+    "uid": "removed_for_security_reasons",
+    "_version": 13,
+    "attrs": {},
+    "children": [
+      {
+        "type": "h5",
+        "attrs": {},
+        "uid": "removed_for_security_reasons",
+        "children": [
+          {
+            "text": "Mauris venenatis dui id massa sollicitudin, non bibendum nunc dictum."
+          }
+        ]
+      }
+    ],
+    "type": "doc"
+  },
+  "h_six": {
+    "uid": "removed_for_security_reasons",
+    "_version": 13,
+    "attrs": {},
+    "children": [
+      {
+        "type": "h6",
+        "attrs": {},
+        "uid": "removed_for_security_reasons",
+        "children": [
+          {
+            "text": "Nunc porta diam vitae purus semper, ut consequat lorem vehicula."
+          }
+        ]
+      }
+    ],
+    "type": "doc"
+  },
+  "order_list": {
+    "uid": "removed_for_security_reasons",
+    "_version": 13,
+    "attrs": {},
+    "children": [
+      {
+        "uid": "removed_for_security_reasons",
+        "type": "ol",
+        "children": [
+          {
+            "type": "li",
+            "attrs": {
+              "style": {
+                "text-align": "justify"
+              },
+              "redactor-attributes": {}
+            },
+            "uid": "removed_for_security_reasons",
+            "children": [
+              {
+                "text": "Morbi in quam molestie, fermentum diam vitae, bibendum ipsum."
+              }
+            ]
+          },
+          {
+            "type": "li",
+            "attrs": {
+              "style": {
+                "text-align": "justify"
+              },
+              "redactor-attributes": {}
+            },
+            "uid": "removed_for_security_reasons",
+            "children": [
+              {
+                "text": "Pellentesque mattis lacus in quam aliquam congue"
+              }
+            ]
+          },
+          {
+            "type": "li",
+            "attrs": {
+              "style": {
+                "text-align": "justify"
+              },
+              "redactor-attributes": {}
+            },
+            "uid": "removed_for_security_reasons",
+            "children": [
+              {
+                "text": "Integer feugiat leo dignissim, lobortis enim vitae, mollis lectus."
+              }
+            ]
+          },
+          {
+            "type": "li",
+            "attrs": {
+              "style": {
+                "text-align": "justify"
+              },
+              "redactor-attributes": {}
+            },
+            "uid": "removed_for_security_reasons",
+            "children": [
+              {
+                "text": "Sed in ante lacinia, molestie metus eu, fringilla sapien."
+              }
+            ]
+          }
+        ],
+        "id": "7f413d448a",
+        "attrs": {}
+      }
+    ],
+    "type": "doc"
+  },
+  "un_order_list": {
+    "uid": "removed_for_security_reasons",
+    "_version": 13,
+    "attrs": {},
+    "children": [
+      {
+        "uid": "removed_for_security_reasons",
+        "type": "ul",
+        "children": [
+          {
+            "uid": "removed_for_security_reasons",
+            "type": "li",
+            "children": [
+              {
+                "text": "Sed quis metus sed mi hendrerit mollis vel et odio."
+              }
+            ],
+            "attrs": {}
+          },
+          {
+            "uid": "removed_for_security_reasons",
+            "type": "li",
+            "children": [
+              {
+                "text": "Integer vitae sem dignissim, elementum libero vel, fringilla massa."
+              }
+            ],
+            "attrs": {}
+          },
+          {
+            "uid": "removed_for_security_reasons",
+            "type": "li",
+            "children": [
+              {
+                "text": "Integer imperdiet arcu sit amet tortor faucibus aliquet."
+              }
+            ],
+            "attrs": {}
+          },
+          {
+            "uid": "removed_for_security_reasons",
+            "type": "li",
+            "children": [
+              {
+                "text": "Aenean scelerisque velit vitae dui vehicula, at congue massa sagittis."
+              }
+            ],
+            "attrs": {}
+          }
+        ],
+        "id": "removed_for_security_reasons",
+        "attrs": {}
+      }
+    ],
+    "type": "doc"
+  },
+  "img": {
+    "uid": "removed_for_security_reasons",
+    "_version": 13,
+    "attrs": {},
+    "children": [
+      {
+        "uid": "removed_for_security_reasons",
+        "type": "img",
+        "attrs": {
+          "url": "https://images.contentstack.com/v3/assets/Donald.jog.png",
+          "width": 33.69418132611637,
+          "height": "auto",
+          "redactor-attributes": {
+            "asset_uid": "47f1aa5ae422cd1"
+          }
+        },
+        "children": [
+          {
+            "text": ""
+          }
+        ]
+      }
+    ],
+    "type": "doc"
+  },
+  "table": {
+    "uid": "removed_for_security_reasons",
+    "_version": 13,
+    "attrs": {},
+    "children": [
+      {
+        "uid": "removed_for_security_reasons",
+        "type": "table",
+        "attrs": {
+          "rows": 4,
+          "cols": 2,
+          "colWidths": [
+            250,
+            250
+          ]
+        },
+        "children": [
+          {
+            "uid": "b9082",
+            "type": "thead",
+            "attrs": {},
+            "children": [
+              {
+                "type": "tr",
+                "attrs": {},
+                "children": [
+                  {
+                    "type": "th",
+                    "attrs": {},
+                    "children": [
+                      {
+                        "type": "p",
+                        "attrs": {},
+                        "children": [
+                          {
+                            "text": "Header 1"
+                          }
+                        ],
+                        "uid": "daa3ef"
+                      }
+                    ],
+                    "uid": "4b3124414a3"
+                  },
+                  {
+                    "type": "th",
+                    "attrs": {},
+                    "children": [
+                      {
+                        "type": "p",
+                        "attrs": {},
+                        "children": [
+                          {
+                            "text": "Header 2"
+                          }
+                        ],
+                        "uid": "eae83c5797d"
+                      }
+                    ],
+                    "uid": "removed_for_security_reasons"
+                  }
+                ],
+                "uid": "removed_for_security_reasons"
+              }
+            ]
+          },
+          {
+            "type": "tbody",
+            "attrs": {},
+            "children": [
+              {
+                "type": "tr",
+                "attrs": {},
+                "children": [
+                  {
+                    "type": "td",
+                    "attrs": {},
+                    "children": [
+                      {
+                        "type": "p",
+                        "attrs": {},
+                        "children": [
+                          {
+                            "text": "Body row 1 data 1"
+                          }
+                        ],
+                        "uid": "removed_for_security_reasons"
+                      }
+                    ],
+                    "uid": "2a70bdeeb99a"
+                  },
+                  {
+                    "type": "td",
+                    "attrs": {},
+                    "children": [
+                      {
+                        "type": "p",
+                        "attrs": {},
+                        "children": [
+                          {
+                            "text": "Body row 1 data 2"
+                          }
+                        ],
+                        "uid": "removed_for_security_reasons"
+                      }
+                    ],
+                    "uid": "removed_for_security_reasons"
+                  }
+                ],
+                "uid": "removed_for_security_reasons"
+              },
+              {
+                "type": "tr",
+                "attrs": {},
+                "children": [
+                  {
+                    "type": "td",
+                    "attrs": {},
+                    "children": [
+                      {
+                        "type": "p",
+                        "attrs": {},
+                        "children": [
+                          {
+                            "text": "Body row 2 data 1"
+                          }
+                        ],
+                        "uid": "removed_for_security_reasons"
+                      }
+                    ],
+                    "uid": "removed_for_security_reasons"
+                  },
+                  {
+                    "type": "td",
+                    "attrs": {},
+                    "children": [
+                      {
+                        "type": "p",
+                        "attrs": {},
+                        "children": [
+                          {
+                            "text": "Body row 2 data 2"
+                          }
+                        ],
+                        "uid": "removed_for_security_reasons"
+                      }
+                    ],
+                    "uid": "removed_for_security_reasons"
+                  }
+                ],
+                "uid": "removed_for_security_reasons"
+              }
+            ],
+            "uid": "removed_for_security_reasons"
+          }
+        ]
+      }
+    ],
+    "type": "doc"
+  },
+  "blockquote": {
+    "uid": "removed_for_security_reasons",
+    "_version": 13,
+    "attrs": {},
+    "children": [
+      {
+        "uid": "removed_for_security_reasons",
+        "type": "blockquote",
+        "id": "removed_for_security_reasons",
+        "children": [
+          {
+            "text": "Praesent eu ex sed nibh venenatis pretium."
+          }
+        ],
+        "attrs": {}
+      }
+    ],
+    "type": "doc"
+  },
+  "code": {
+    "uid": "removed_for_security_reasons",
+    "_version": 13,
+    "attrs": {},
+    "children": [
+      {
+        "uid": "removed_for_security_reasons",
+        "type": "code",
+        "attrs": {},
+        "children": [
+          {
+            "text": "Code template."
+          }
+        ]
+      }
+    ],
+    "type": "doc"
+  },
+  "link": {
+    "uid": "removed_for_security_reasons",
+    "_version": 13,
+    "attrs": {},
+    "children": [
+      {
+        "type": "p",
+        "attrs": {
+          "style": {
+            "text-align": "left"
+          },
+          "redactor-attributes": {}
+        },
+        "uid": "removed_for_security_reasons",
+        "children": [
+          {
+            "text": "",
+            "bold": true,
+            "italic": true,
+            "underline": true,
+            "subscript": true
+          },
+          {
+            "uid": "removed_for_security_reasons",
+            "type": "a",
+            "attrs": {
+              "url": "LINK.com",
+              "target": "_self"
+            },
+            "children": [
+              {
+                "text": "LINK"
+              }
+            ]
+          },
+          {
+            "text": ""
+          }
+        ]
+      }
+    ],
+    "type": "doc"
+  },
+  "reference": {
+    "uid": "removed_for_security_reasons",
+    "_version": 1,
+    "attrs": {},
+    "children": [
+      {
+        "uid": "removed_for_security_reasons",
+        "type": "reference",
+        "attrs": {
+          "display-type": "display",
+          "asset-uid": "keystarting44asset",
+          "content-type-uid": "sys_assets",
+          "asset-link": "https://images.contentstack.com/v3/assets/51807f919e0e4/11.jpg",
+          "asset-name": "11.jpg",
+          "asset-type": "image/jpeg",
+          "type": "asset",
+          "class-name": "embedded-asset",
+          "width": 25.16914749661705,
+          "className": "dsd",
+          "id": "sdf"
+        },
+        "children": [
+          {
+            "text": ""
+          }
+        ]
+      }
+    ],
+    "type": "doc"
+  },
+  "tags": [],
+  "title": "Test Rich Text",
+  "updated_at": "2021-06-01T11:59:18.036Z",
+  "updated_by": "removed_for_security_reasons",
+  "url": "/test-rich-text"
+}

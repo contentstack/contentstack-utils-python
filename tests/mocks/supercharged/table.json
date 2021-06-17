@@ -1,0 +1,159 @@
+{
+  "uid": "removed_for_security_reasons",
+  "_version": 13,
+  "attrs": {},
+  "children": [
+    {
+      "uid": "removed_for_security_reasons",
+      "type": "table",
+      "attrs": {
+        "rows": 4,
+        "cols": 2,
+        "colWidths": [
+          250,
+          250
+        ]
+      },
+      "children": [
+        {
+          "uid": "b9082",
+          "type": "thead",
+          "attrs": {},
+          "children": [
+            {
+              "type": "tr",
+              "attrs": {},
+              "children": [
+                {
+                  "type": "th",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "type": "p",
+                      "attrs": {},
+                      "children": [
+                        {
+                          "text": "Header 1"
+                        }
+                      ],
+                      "uid": "daa3ef"
+                    }
+                  ],
+                  "uid": "4b3124414a3"
+                },
+                {
+                  "type": "th",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "type": "p",
+                      "attrs": {},
+                      "children": [
+                        {
+                          "text": "Header 2"
+                        }
+                      ],
+                      "uid": "removed_for_security_reasons"
+                    }
+                  ],
+                  "uid": "removed_for_security_reasons"
+                }
+              ],
+              "uid": "removed_for_security_reasons"
+            }
+          ]
+        },
+        {
+          "type": "tbody",
+          "attrs": {},
+          "children": [
+            {
+              "type": "tr",
+              "attrs": {},
+              "children": [
+                {
+                  "type": "td",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "type": "p",
+                      "attrs": {},
+                      "children": [
+                        {
+                          "text": "Body row 1 data 1"
+                        }
+                      ],
+                      "uid": "removed_for_security_reasons"
+                    }
+                  ],
+                  "uid": "2a70bdeeb99a"
+                },
+                {
+                  "type": "td",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "type": "p",
+                      "attrs": {},
+                      "children": [
+                        {
+                          "text": "Body row 1 data 2"
+                        }
+                      ],
+                      "uid": "removed_for_security_reasons"
+                    }
+                  ],
+                  "uid": "removed_for_security_reasons"
+                }
+              ],
+              "uid": "removed_for_security_reasons"
+            },
+            {
+              "type": "tr",
+              "attrs": {},
+              "children": [
+                {
+                  "type": "td",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "type": "p",
+                      "attrs": {},
+                      "children": [
+                        {
+                          "text": "Body row 2 data 1"
+                        }
+                      ],
+                      "uid": "removed_for_security_reasons"
+                    }
+                  ],
+                  "uid": "removed_for_security_reasons"
+                },
+                {
+                  "type": "td",
+                  "attrs": {},
+                  "children": [
+                    {
+                      "type": "p",
+                      "attrs": {},
+                      "children": [
+                        {
+                          "text": "Body row 2 data 2"
+                        }
+                      ],
+                      "uid": "removed_for_security_reasons"
+                    }
+                  ],
+                  "uid": "removed_for_security_reasons"
+                }
+              ],
+              "uid": "removed_for_security_reasons"
+            }
+          ],
+          "uid": "removed_for_security_reasons"
+        }
+      ]
+    }
+  ],
+  "type": "doc"
+}
