@@ -67,11 +67,11 @@ class Options:
         if node_type == 'p':
             return "<p>" + inner_html + "</p>"
         if node_type == 'a':
-            return "<a href=\"" + node_obj["attrs"]["url"] + "\">" + inner_html + "</a>"
+            return "<a href=" + node_obj["attrs"]["href"] + ">" + inner_html + "</a>"
         if node_type == 'img':
-            return "<img src=" + "\""+node_obj["attrs"]["url"] + inner_html + "\" />"
+            return "<img src=" + node_obj["attrs"]["src"] + " />" + inner_html + ""
         if node_type == 'embed':
-            return "<iframe href=" + node_obj["attrs"]["url"] + ">" + inner_html + "</iframe>"
+            return "<iframe src=" + node_obj["attrs"]["src"] + ">" + inner_html + "</iframe>"
         if node_type == 'h1':
             return "<h1>" + inner_html + "</h1>"
         if node_type == 'h2':
