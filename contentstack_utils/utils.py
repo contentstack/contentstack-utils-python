@@ -48,7 +48,7 @@ class Utils:
         Utils.__get_content(keys, entry, option, render_callback)
 
     @staticmethod
-    def __get_content(keys_array: list, entry, option: Options, render_callback):
+    def __get_content(keys_array, entry, option: Options, render_callback):
         if keys_array is not None and len(keys_array) > 0:
             key = keys_array[0]
             if len(keys_array) == 1 and keys_array[0] in entry:
@@ -145,11 +145,11 @@ class Utils:
     def __enumerate_content(content, entry, option):
         if len(content) > 0:
             if isinstance(content, list):
-                json_array_rte_content = []
+                array_content = []
                 for item in content:
                     result = Utils.__enumerate_content(item, entry, option)
-                    json_array_rte_content.append(result)
-                return json_array_rte_content
+                    array_content.append(result)
+                return array_content
             if isinstance(content, dict):
                 if 'type' and 'children' in content:
                     if content['type'] == 'doc':
