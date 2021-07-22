@@ -1,0 +1,76 @@
+{
+  "uid": "removed_for_security_reasons",
+  "_version": 13,
+  "attrs": {},
+  "children": [
+    {
+      "uid": "removed_for_security_reasons",
+      "type": "ol",
+      "children": [
+        {
+          "type": "li",
+          "attrs": {
+            "style": {
+              "text-align": "justify"
+            },
+            "redactor-attributes": {}
+          },
+          "uid": "removed_for_security_reasons",
+          "children": [
+            {
+              "text": "Morbi in quam molestie, fermentum diam vitae, bibendum ipsum."
+            }
+          ]
+        },
+        {
+          "type": "li",
+          "attrs": {
+            "style": {
+              "text-align": "justify"
+            },
+            "redactor-attributes": {}
+          },
+          "uid": "removed_for_security_reasons",
+          "children": [
+            {
+              "text": "Pellentesque mattis lacus in quam aliquam congue"
+            }
+          ]
+        },
+        {
+          "type": "li",
+          "attrs": {
+            "style": {
+              "text-align": "justify"
+            },
+            "redactor-attributes": {}
+          },
+          "uid": "removed_for_security_reasons",
+          "children": [
+            {
+              "text": "Integer feugiat leo dignissim, lobortis enim vitae, mollis lectus."
+            }
+          ]
+        },
+        {
+          "type": "li",
+          "attrs": {
+            "style": {
+              "text-align": "justify"
+            },
+            "redactor-attributes": {}
+          },
+          "uid": "removed_for_security_reasons",
+          "children": [
+            {
+              "text": "Sed in ante lacinia, molestie metus eu, fringilla sapien."
+            }
+          ]
+        }
+      ],
+      "id": "removed_for_security_reasons",
+      "attrs": {}
+    }
+  ],
+  "type": "doc"
+}

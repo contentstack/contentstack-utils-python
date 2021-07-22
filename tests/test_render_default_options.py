@@ -1,11 +1,17 @@
+import json
 import os
 import unittest
-import contentstack_utils.utils
-import contentstack_utils.render.options
-import json
 
 from contentstack_utils.helper.metadata import Metadata, StyleType
 from contentstack_utils.render import options
+
+
+def _is_json(file):
+    try:
+        json.dumps(file)
+        return True
+    except ValueError:
+        return False
 
 
 def read_mock_path():
@@ -19,27 +25,23 @@ def read_mock_path():
 class TestRenderDefaultOption(unittest.TestCase):
 
     def test_read_json_file_by_absolute_path(self):
-        array = read_mock_path()
-        self.assertIsNotNone(array)
+        self.assertIsNotNone(read_mock_path())
 
     def test_read_json_file_by_content_path(self):
-        result = contentstack_utils.utils._is_json("/tests/mocks/embedded_items.json")
+        result = _is_json("/tests/mocks/embedded_items.json")
         instance = isinstance(result, bool)
         self.assertTrue(instance, 'this is to check the bool value')
 
     def test_get_title_or_uid(self):
-        array = read_mock_path()
-        should_return_title = options._title_or_uid(array)
+        should_return_title = options._title_or_uid(read_mock_path())
         self.assertEqual("Entry one", should_return_title, "It should match dictionary title")
 
     def test_get_asset_title_or_uid(self):
-        array = read_mock_path()
-        should_return_title = options._asset_title_or_uid(array)
+        should_return_title = options._asset_title_or_uid(read_mock_path())
         self.assertEqual("Entry one", should_return_title, "It should match dictionary title")
 
     def test_get_default_options_render_option_block(self):
-        array = read_mock_path()
-        dictionary = array['_embedded_items']['rich_text_editor'][0]
+        dictionary = read_mock_path()['_embedded_items']['rich_text_editor'][0]
         default_opt = options.Options()
         metadata = Metadata("Hi sample entry for embedding", "entry", 'bltb5a04880fbb74f26', 'samplect',
                             StyleType.BLOCK, "this is outer html", 'samplect attributes')
@@ -48,8 +50,7 @@ class TestRenderDefaultOption(unittest.TestCase):
                          "<span>samplect</span></p></div>", result)
 
     def test_get_default_options_render_option_inline(self):
-        array = read_mock_path()
-        dictionary = array['_embedded_items']['rich_text_editor'][0]
+        dictionary = read_mock_path()['_embedded_items']['rich_text_editor'][0]
         default_opt = options.Options()
         metadata = Metadata("this is sample text", "entry", 'blt8928738723', 'products',
                             StyleType.INLINE, "this is outer html", 'sample attributes')
@@ -57,8 +58,7 @@ class TestRenderDefaultOption(unittest.TestCase):
         self.assertEqual('<span>Hi sample entry for embedding</span>', result)
 
     def test_get_default_options_render_option_link(self):
-        array = read_mock_path()
-        dictionary = array['_embedded_items']['rich_text_editor'][0]
+        dictionary = read_mock_path()['_embedded_items']['rich_text_editor'][0]
         default_opt = options.Options()
         metadata = Metadata("this is sample text", "entry", 'blt8928738723', 'products',
                             StyleType.LINK, "this is outer html", 'sample attributes')
@@ -66,8 +66,7 @@ class TestRenderDefaultOption(unittest.TestCase):
         self.assertEqual('<a href=/sample-entry-one>Hi sample entry for embedding</a>', result)
 
     def test_get_default_options_render_asset_display(self):
-        array = read_mock_path()
-        dictionary = array['_embedded_items']['rich_text_editor'][0]
+        dictionary = read_mock_path()['_embedded_items']['rich_text_editor'][0]
         default_opt = options.Options()
         metadata = Metadata("this is sample text", "asset", 'blt8928738723', 'products',
                             StyleType.DISPLAY, "this is outer html", 'sample attributes')
@@ -75,8 +74,7 @@ class TestRenderDefaultOption(unittest.TestCase):
         self.assertEqual('<img src=/sample-entry-one alt=Hi sample entry for embedding/>', result)
 
     def test_get_default_options_render_asset_none(self):
-        array = read_mock_path()
-        dictionary = array['_embedded_items']['rich_text_editor'][0]
+        dictionary = read_mock_path()['_embedded_items']['rich_text_editor'][0]
         default_opt = options.Options()
         metadata = Metadata("this is sample text", "asset", 'blt8928738723', 'products',
                             StyleType.DOWNLOAD, "this is outer html", 'sample attributes')

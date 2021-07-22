@@ -1,46 +1,117 @@
-# pylint: disable=missing-function-docstring
-# pylint: disable=missing-docstring
-# pylint: disable=too-few-public-methods
 from contentstack_utils.helper.metadata import Metadata
 
 
-def _title_or_uid(embedded_obj: dict) -> str:
+def _title_or_uid(_obj: dict) -> str:
     _title = ""
-    if embedded_obj is not None:
-        if 'title' in embedded_obj and len(embedded_obj['title']) != 0:
-            _title = embedded_obj['title']
-        elif 'uid' in embedded_obj:
-            _title = embedded_obj['uid']
+    if _obj is not None:
+        if 'title' in _obj and len(_obj['title']) != 0:
+            _title = _obj['title']
+        elif 'uid' in _obj:
+            _title = _obj['uid']
     return _title
 
 
-def _asset_title_or_uid(embedded_obj: dict) -> str:
+def _asset_title_or_uid(_obj: dict) -> str:
     _title = ""
-    if embedded_obj is not None:
-        if 'title' in embedded_obj and len(embedded_obj['title']) != 0:
-            _title = embedded_obj['title']
-        elif 'filename' in embedded_obj:
-            _title = embedded_obj['filename']
-        elif 'uid' in embedded_obj:
-            _title = embedded_obj['uid']
+    if _obj is not None:
+        if 'title' in _obj and len(_obj['title']) != 0:
+            _title = _obj['title']
+        elif 'filename' in _obj:
+            _title = _obj['filename']
+        elif 'uid' in _obj:
+            _title = _obj['uid']
     return _title
 
 
 class Options:
 
     @staticmethod
-    def render_options(embedded_obj: dict, metadata: Metadata):
+    def render_options(_obj: dict, metadata: Metadata):
         if metadata.style_type.value == 'block':
-            return '<div><p>' + _title_or_uid(embedded_obj) \
-                   + '</p><div><p>Content type: <span>' + embedded_obj['_content_type_uid'] \
+            return '<div><p>' + _title_or_uid(_obj) \
+                   + '</p><div><p>Content type: <span>' + _obj['_content_type_uid'] \
                    + '</span></p></div>'
         if metadata.style_type.value == 'inline':
-            return '<span>' + _title_or_uid(embedded_obj) + '</span>'
+            return '<span>' + _title_or_uid(_obj) + '</span>'
         if metadata.style_type.value == 'link':
-            return '<a href=' + embedded_obj['url'] + '>' + _title_or_uid(embedded_obj) + '</a>'
+            return '<a href=' + _obj['url'] + '>' + _title_or_uid(_obj) + '</a>'
         if metadata.style_type.value == 'display':
-            return '<img src=' + embedded_obj['url'] + ' alt=' \
-                   + _asset_title_or_uid(embedded_obj) + '/>'
+            return '<img src=' + _obj['url'] + ' alt=' \
+                   + _asset_title_or_uid(_obj) + '/>'
         if metadata.style_type.value == 'download':
-            return '<a href=' + embedded_obj['url'] + '>' + _asset_title_or_uid(embedded_obj) + '</a>'
+            return '<a href=' + _obj['url'] + '>' + _asset_title_or_uid(_obj) + '</a>'
 
+    @staticmethod
+    def render_mark(mark_type: str, render_text: str):
+        if mark_type == 'superscript':
+            return "<sup>" + render_text + "</sup>"
+        if mark_type == 'subscript':
+            return "<sub>" + render_text + "</sub>"
+        if mark_type == 'inlineCode':
+            return "<span>" + render_text + "</span>"
+        if mark_type == 'strikethrough':
+            return "<strike>" + render_text + "</strike>"
+        if mark_type == 'underline':
+            return "<u>" + render_text + "</u>"
+        if mark_type == 'italic':
+            return "<em>" + render_text + "</em>"
+        if mark_type == 'bold':
+            return "<strong>" + render_text + "</strong>"
+        else:
+            return render_text
+        pass
+
+    @staticmethod
+    def render_node(node_type, node_obj: dict, callback):
+        inner_html = callback(node_obj['children'])
+        if node_type == 'p':
+            return "<p>" + inner_html + "</p>"
+        if node_type == 'a':
+            return "<a href=" + node_obj["attrs"]["href"] + ">" + inner_html + "</a>"
+        if node_type == 'img':
+            return "<img src=" + node_obj["attrs"]["src"] + " />" + inner_html + ""
+        if node_type == 'embed':
+            return "<iframe src=" + node_obj["attrs"]["src"] + ">" + inner_html + "</iframe>"
+        if node_type == 'h1':
+            return "<h1>" + inner_html + "</h1>"
+        if node_type == 'h2':
+            return "<h2>" + inner_html + "</h2>"
+        if node_type == 'h3':
+            return "<h3>" + inner_html + "</h3>"
+        if node_type == 'h4':
+            return "<h4>" + inner_html + "</h4>"
+        if node_type == 'h5':
+            return "<h5>" + inner_html + "</h5>"
+        if node_type == 'h6':
+            return "<h6>" + inner_html + "</h6>"
+        if node_type == 'ol':
+            return "<ol>" + inner_html + "</ol>"
+        if node_type == 'ul':
+            return "<ul>" + inner_html + "</ul>"
+        if node_type == 'li':
+            return "<li>" + inner_html + "</li>"
+        if node_type == 'hr':
+            return "<hr />"
+        if node_type == 'table':
+            return "<table>" + inner_html + "</table>"
+        if node_type == 'thead':
+            return "<thead>" + inner_html + "</thead>"
+        if node_type == 'tbody':
+            return "<tbody>" + inner_html + "</tbody>"
+        if node_type == 'tfoot':
+            return "<tfoot>" + inner_html + "</tfoot>"
+        if node_type == 'tr':
+            return "<tr>" + inner_html + "</tr>"
+
+        if node_type == 'th':
+            return "<th>" + inner_html + "</th>"
+        if node_type == 'td':
+            return "<td>" + inner_html + "</td>"
+        if node_type == 'blockquote':
+            return "<blockquote>" + inner_html + "</blockquote>"
+        if node_type == 'code':
+            return "<code>" + inner_html + "</code>"
+        if node_type in ['doc', 'reference']:
+            return inner_html
+        else:
+            return inner_html

@@ -3,12 +3,6 @@
 # coverage report -m
 # coverage html -d coveragereport
 """
-The __init__.py files are required to make Python treat the directories as containing
-packages; this is done to prevent directories with a common name, such as string,
-from unintentionally hiding valid modules that occur later on the module search path
-Used: Safety checks your installed dependencies for known security vulnerabilities
-file __init__.py contains package information like
-
 __author__, __status__, __version__, __endpoint__ and __email__
 
 `Your code has been rated at 10.00/10`
