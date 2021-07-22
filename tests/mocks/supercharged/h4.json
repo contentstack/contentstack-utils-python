@@ -1,0 +1,27 @@
+{
+  "uid": "removed_for_security_reasons",
+  "_version": 13,
+  "attrs": {
+    "style": {
+      "text-align": "center"
+    },
+    "redactor-attributes": {}
+  },
+  "children": [
+    {
+      "type": "h4",
+      "attrs": {},
+      "uid": "removed_for_security_reasons",
+      "children": [
+        {
+          "text": "MaNullam feugiat turpis quis elit interdum, vitae laoreet quam viverra",
+          "bold": true,
+          "italic": true,
+          "underline": true,
+          "subscript": true
+        }
+      ]
+    }
+  ],
+  "type": "doc"
+}

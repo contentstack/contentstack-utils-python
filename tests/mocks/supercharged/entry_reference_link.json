@@ -1,0 +1,27 @@
+{
+  "uid": "removed_for_security_reasons",
+  "_version": 1,
+  "attrs": {},
+  "children": [
+    {
+      "uid": "removed_for_security_reasons",
+      "type": "reference",
+      "attrs": {
+        "target": "_self",
+        "href": "/copy-of-entry-final-02",
+        "display-type": "link",
+        "entry-uid": "someentryuid",
+        "content-type-uid": "embeddedrte",
+        "locale": "en-us",
+        "type": "entry",
+        "class-name": "embedded-entry"
+      },
+      "children": [
+        {
+          "text": "/copy-of-entry-final-02"
+        }
+      ]
+    }
+  ],
+  "type": "doc"
+}

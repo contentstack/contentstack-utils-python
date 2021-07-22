@@ -64,15 +64,15 @@ Contentstack Utils SDK lets you interact with the Content Delivery APIs and retr
 To get an embedded item of a single entry, you need to provide the stack API key, environment name, content type’s UID, and entry’s UID. Then, use the `entry.fetch` function as shown below:
 
 ```python
-   import contentstack
+import contentstack
     
-   stack = contentstack.Stack('api_key','delivery_token','environment')
-   content_type = stack.content_type("content_type_uid")
-   entry = content_type.entry("entry_uid")
-   result = entry.fetch()
-   if result is not None:
-      entry = result['entries']
-      Utils.render(entry, ['rich_text_editor', 'some_other_text'], Option())
+stack = contentstack.Stack('api_key','delivery_token','environment')
+content_type = stack.content_type("content_type_uid")
+entry = content_type.entry("entry_uid")
+result = entry.fetch()
+if result is not None:
+   entry = result['entries']
+   Utils.render(entry, ['rich_text_editor', 'some_other_text'], Option())
        
 ```
 
@@ -81,13 +81,32 @@ To get an embedded item of a single entry, you need to provide the stack API key
 To get embedded items from multiple entries, you need to provide the stack API key, delivery token, environment name, and content type’s UID. 
 
 ```python
-    import contentstack
+import contentstack
 
-    stack = contentstack.Stack('api_key','delivery_token','environment')
-    query = stack.content_type("content_type_uid").query()
-    result = query.find()
-    if result is not None and 'entries' in result:
-      entry = result['entries']
-      for item in range:
-          Utils.render(item, ['rich_text_editor', 'some_other_text'], Option())
+stack = contentstack.Stack('api_key','delivery_token','environment')
+query = stack.content_type("content_type_uid").query()
+result = query.find()
+if result is not None and 'entries' in result:
+   entry = result['entries']
+   for item in range:
+       option = Option()
+       Utils.render(item, ['rich_text_editor', 'some_other_text'], option)
+```
+
+
+## Supercharged
+
+To get supercharged items from multiple entries, you need to provide the stack API key, delivery token, environment name, and content type’s UID. 
+
+```python
+import contentstack
+
+stack = contentstack.Stack('api_key','delivery_token','environment')
+query = stack.content_type("content_type_uid").query()
+result = query.find()
+if result is not None and 'entries' in result:
+   entry = result['entries']
+   for item in range:
+       option = Option()
+       Utils.json_to_html(item, ['paragraph_text'], option)
 ```
