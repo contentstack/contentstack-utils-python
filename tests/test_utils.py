@@ -61,7 +61,7 @@ class TestUtility(unittest.TestCase):
                           "data-sys-asset-uid=\"7324a68403ee7281\" data-sys-asset-filename=\"11.jpg\" " \
                           "data-sys-asset-contenttype=\"image/jpeg\" type=\"asset\" " \
                           "sys-style-type=\"display\"></figure>"
-            response = Utils.render_content(rte_content, entry_list, callback)
+            response = Utils.render_content(rte_content, entry_list, callback, )
             # self.assertEqual('<p>Global multiple group 1</p><img '
             #                  'src=https://dev16-images.contentstack.com/v3/assets/'
             #                  '11.jpg alt=11.jpg/>', response)

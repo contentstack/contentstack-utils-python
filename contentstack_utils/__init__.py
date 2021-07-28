@@ -17,6 +17,6 @@ from contentstack_utils.utils import Utils
 __title__ = 'contentstack_utils'
 __author__ = 'contentstack'
 __status__ = 'debug'
-__version__ = '0.0.1'
+__version__ = '1.1.0'
 __endpoint__ = 'cdn.contentstack.io'
 __contact__ = 'support@contentstack.com'
