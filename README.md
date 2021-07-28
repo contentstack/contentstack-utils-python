@@ -106,7 +106,24 @@ query = stack.content_type("content_type_uid").query()
 result = query.find()
 if result is not None and 'entries' in result:
    entry = result['entries']
-   for item in range:
+   for item in entry:
        option = Option()
        Utils.json_to_html(item, ['paragraph_text'], option)
+```
+
+## GraphQL SRTE
+
+To get supercharged items from multiple entries, you need to provide the stack API key, delivery token, environment name, and content type’s UID. 
+
+```python
+import contentstack
+
+stack = contentstack.Stack('api_key','delivery_token','environment')
+query = stack.content_type("content_type_uid").query()
+result = query.find()
+if result is not None and 'entries' in result:
+   entry = result['entries']
+   for item in entry:
+       option = Option()
+       GQL.json_to_html(item, ['paragraph_text'], option)
 ```

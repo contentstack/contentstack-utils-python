@@ -1460,7 +1460,7 @@
         "uid": "removed_for_security_reasons",
         "type": "img",
         "attrs": {
-          "url": "https://images.contentstack.com/v3/assets/Donald.jog.png",
+          "src": "https://images.contentstack.com/v3/assets/Donald.jog.png",
           "width": 33.69418132611637,
           "height": "auto",
           "redactor-attributes": {
@@ -1698,7 +1698,7 @@
             "uid": "removed_for_security_reasons",
             "type": "a",
             "attrs": {
-              "url": "LINK.com",
+              "href": "LINK.com",
               "target": "_self"
             },
             "children": [
