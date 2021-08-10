@@ -4,11 +4,11 @@ from contentstack_utils.embedded.styletype import StyleType
 def convert_style(style) -> StyleType:
     if style == 'block':
         return StyleType.BLOCK
-    elif style == 'inline':
+    if style == 'inline':
         return StyleType.INLINE
-    elif style == 'link':
+    if style == 'link':
         return StyleType.LINK
-    elif style == 'display':
+    if style == 'display':
         return StyleType.DISPLAY
-    elif style == 'download':
+    if style == 'download':
         return StyleType.DOWNLOAD

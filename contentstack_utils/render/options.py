@@ -28,8 +28,11 @@ class Options:
     @staticmethod
     def render_options(_obj: dict, metadata: Metadata):
         if metadata.style_type.value == 'block':
+            _content_type_uid = ''
+            if '_content_type_uid' in _obj:
+                _content_type_uid = _obj['_content_type_uid']
             return '<div><p>' + _title_or_uid(_obj) \
-                   + '</p><div><p>Content type: <span>' + _obj['_content_type_uid'] \
+                   + '</p><div><p>Content type: <span>' + _content_type_uid \
                    + '</span></p></div>'
         if metadata.style_type.value == 'inline':
             return '<span>' + _title_or_uid(_obj) + '</span>'
@@ -67,11 +70,11 @@ class Options:
         if node_type == 'p':
             return "<p>" + inner_html + "</p>"
         if node_type == 'a':
-            return "<a href=" + node_obj["attrs"]["href"] + ">" + inner_html + "</a>"
+            return "<a href=\"{}\">{}</a>".format(node_obj["attrs"]["href"], inner_html)
         if node_type == 'img':
-            return "<img src=" + node_obj["attrs"]["src"] + " />" + inner_html + ""
+            return "<img src=\"{}\" />{}".format(node_obj["attrs"]["src"], inner_html)
         if node_type == 'embed':
-            return "<iframe src=" + node_obj["attrs"]["src"] + ">" + inner_html + "</iframe>"
+            return "<iframe src={}>{}</iframe>".format(node_obj["attrs"]["src"], inner_html)
         if node_type == 'h1':
             return "<h1>" + inner_html + "</h1>"
         if node_type == 'h2':
@@ -102,7 +105,6 @@ class Options:
             return "<tfoot>" + inner_html + "</tfoot>"
         if node_type == 'tr':
             return "<tr>" + inner_html + "</tr>"
-
         if node_type == 'th':
             return "<th>" + inner_html + "</th>"
         if node_type == 'td':
