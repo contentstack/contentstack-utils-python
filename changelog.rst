@@ -2,9 +2,20 @@
 **CHANGELOG**
 ================
 
+*v1.2.0*
+============
+
+NEW FEATURE: GraphQl supercharged RTE
+
+- GQL.jsonToHtml function support added
+
+
+*v1.1.0*
+============
+
 NEW FEATURE: Supercharged RTE
 
-- jsonToHtml function support added
+- Utils.jsonToHtml function support added
 
 *v0.2.0*
 ============
