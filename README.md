@@ -31,7 +31,7 @@ If you are using Contentstack Python SDK in your project by running the followin
 ## For the specific version
 
 ```python
-   pip install Contentstack==1.4.0
+   pip install Contentstack==1.5.1
 ```
 
 ## Usage
@@ -46,11 +46,9 @@ To render embedded items on the front-end, use the renderContents function, and 
     from contentstack_utils.utils import Utils
     from contentstack_utils.render.options import Options
     
-    json_array # should be type of dictionary or list
-    rte_content = "html_string"
-    
-    callback = Options()
-    response = Utils.render_content(rte_content, json_array, callback)
+    json_array = {} # should be type of dictionary or list
+    option = Options()
+    response = Utils.render_content('html_string', json_array, option)
     print(response)
     
 ```
