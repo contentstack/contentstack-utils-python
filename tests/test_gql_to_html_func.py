@@ -15,9 +15,18 @@ def mock_entry():
 
 
 class TestGQLToHtml(unittest.TestCase):
+    srt_zero = '<p></p><div><p>Abcd Three</p><div><p>Content type: <span></span></p></div>'
 
     def setUp(self):
         print("logger for convert style")
+
+    def test_read_entry(self):
+        entry = mock_entry()
+        self.assertIsNotNone(entry)
+
+    def test_read_entry_uid(self):
+        entry = mock_entry()
+        self.assertEqual('sameple_uid', entry['srte']['json'][0]['uid'])
 
     def test_gql_to_html(self):
         entry = mock_entry()
