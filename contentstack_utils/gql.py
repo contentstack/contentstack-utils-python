@@ -1,4 +1,3 @@
-from contentstack_utils import Utils
 from contentstack_utils.automate import Automate
 from contentstack_utils.render.options import Options
 
