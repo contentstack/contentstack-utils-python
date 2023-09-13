@@ -2,6 +2,21 @@
 **CHANGELOG**
 ================
 
+*v1.2.2*
+============
+
+NEW FEATURE: Auto publish package support added
+
+- package release support added
+
+*v1.2.1*
+============
+
+NEW FEATURE: GraphQL SRTE  
+
+- GraphQL SRTE support added
+
+
 *v1.2.0*
 ============
 

@@ -15,7 +15,7 @@ setup(
     long_description_content_type="text/markdown",
     url="https://github.com/contentstack/contentstack-utils-python",
     license='MIT',
-    version='1.2.0',
+    version='1.2.2',
     install_requires=[
         
     ],
@@ -32,6 +32,5 @@ setup(
         'Programming Language :: Python :: 3.8',
         'Programming Language :: Python :: 3.9',
     ],
-
     python_requires='>=3.6',
 )

@@ -26,8 +26,7 @@ class TestRenderOption(unittest.TestCase):
         self.assertEqual('<img src=/sample-entry-one alt=Hi sample entry for embedding/>', result)
 
     def test_get_default_options_render_no_style(self):
-        with open('/Users/shaileshmishra/Documents/workspace/contentstack/python/contentstack-utils-python/tests'
-                  '/mocks/embedded_items.json', 'r') as f:
+        with open('tests/mocks/embedded_items.json', 'r') as f:
             array = json.load(f)
             dictionary = array['entries'][0]['_embedded_items']['rich_text_editor'][0]
             default_opt = options.Options()
