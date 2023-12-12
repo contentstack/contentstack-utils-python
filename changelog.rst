@@ -5,7 +5,7 @@
 *v1.2.2*
 ============
 
-NEW FEATURE: Auto publish package support added
+NEW FEATURE: Minor bug fixes and code improvements.
 
 - package release support added
 
