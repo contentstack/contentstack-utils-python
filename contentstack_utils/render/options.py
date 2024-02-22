@@ -113,6 +113,8 @@ class Options:
             return "<blockquote>" + inner_html + "</blockquote>"
         if node_type == 'code':
             return "<code>" + inner_html + "</code>"
+        if node_type == 'fragment':
+            return "<fragment>" + inner_html + "</fragment>"
         if node_type in ['doc', 'reference']:
             return inner_html
         else:
