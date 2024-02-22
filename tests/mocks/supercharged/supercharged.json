@@ -1745,6 +1745,100 @@
     ],
     "type": "doc"
   },
+  "nested_order_list_with_fragment": {
+    "type": "ol",
+    "children": [
+      {
+        "type": "li",
+        "children": [
+          {
+            "type": "fragment",
+            "children": [
+              {
+                "text": "List Item 1"
+              }
+            ]
+          },
+          {
+            "type": "ol",
+            "children": [
+              {
+                "type": "li",
+                "children": [
+                  {
+                    "text": "List Item 1.1"
+                  }
+                ]
+              },
+              {
+                "type": "li",
+                "children": [
+                  {
+                    "text": "List Item 1.2"
+                  }
+                ]
+              },
+              {
+                "type": "li",
+                "children": [
+                  {
+                    "text": "List Item 1.3"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "nested_unorder_list_with_fragment": {
+    "type": "ul",
+    "children": [
+      {
+        "type": "li",
+        "children": [
+          {
+            "type": "fragment",
+            "children": [
+              {
+                "text": "List Item 1"
+              }
+            ]
+          },
+          {
+            "type": "ul",
+            "children": [
+              {
+                "type": "li",
+                "children": [
+                  {
+                    "text": "List Item 1.1"
+                  }
+                ]
+              },
+              {
+                "type": "li",
+                "children": [
+                  {
+                    "text": "List Item 1.2"
+                  }
+                ]
+              },
+              {
+                "type": "li",
+                "children": [
+                  {
+                    "text": "List Item 1.3"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
   "tags": [],
   "title": "Test Rich Text",
   "updated_at": "2021-06-01T11:59:18.036Z",

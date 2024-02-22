@@ -30,3 +30,5 @@ tableHtml = "<table><thead><tr><th><p>Header 1</p></th><th><p>Header 2</p></th><
 blockquoteHtml = "<blockquote>Praesent eu ex sed nibh venenatis pretium.</blockquote>"
 codeHtml = "<code>Code template.</code>"
 linkInPHtml = "<p><strong><em><u><sub></sub></u></em></strong><a href=\"LINK.com\">LINK</a></p>"
+nested_order_list_with_fragment = "<ol><li><fragment>List Item 1</fragment><ol><li>List Item 1.1</li><li>List Item 1.2</li><li>List Item 1.3</li></ol></li></ol>"
+nested_unorder_list_with_fragment = "<ul><li><fragment>List Item 1</fragment><ul><li>List Item 1.1</li><li>List Item 1.2</li><li>List Item 1.3</li></ul></li></ul>"
