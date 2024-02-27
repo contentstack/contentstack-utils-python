@@ -418,7 +418,7 @@
       "uid": "deleted_for_security_reasons",
       "type": "img",
       "attrs": {
-        "url": "https://dev16-images.contentstack.com/v3/assets/Donald.jog.png",
+        "url": "https://app.contentstack.com/v3/assets/Donald.jog.png",
         "width": 33.69418132611637,
         "height": "auto",
         "redactor-attributes": {
@@ -610,7 +610,7 @@
         "display-type": "asset",
         "asset-uid": "assetuiddemo",
         "content-type-uid": "sys_assets",
-        "asset-link": "https://dev16-images.contentstack.com/v3/assets/11.jpg",
+        "asset-link": "https://app.contentstack.com/v3/assets/11.jpg",
         "asset-name": "11.jpg",
         "asset-type": "image/jpeg",
         "type": "asset",
