@@ -23,36 +23,6 @@ NEW FEATURE: GraphQL SRTE
 - GraphQL SRTE support added
 
 
-*v1.2.2*
-============
-
-NEW FEATURE: Minor bug fixes and code improvements.
-
-- package release support added
-
-*v1.2.1*
-============
-
-NEW FEATURE: GraphQL SRTE  
-
-- GraphQL SRTE support added
-
-
-*v1.2.2*
-============
-
-NEW FEATURE: Minor bug fixes and code improvements.
-
-- package release support added
-
-*v1.2.1*
-============
-
-NEW FEATURE: GraphQL SRTE  
-
-- GraphQL SRTE support added
-
-
 *v1.2.0*
 ============
 
