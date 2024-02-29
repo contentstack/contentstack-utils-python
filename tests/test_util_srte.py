@@ -112,3 +112,13 @@ class TestSuperchargedUtils(unittest.TestCase):
     #     array_str = ['reference']
     #     Utils.json_to_html([self._json_data], array_str, Options())
     #     self.assertEqual(Results.linkInPHtml, self._json_data['reference'])
+    
+    def test_nested_order_list_in_supercharged_dict_to_html(self):
+        array_str = ['nested_order_list_with_fragment']
+        Utils.json_to_html([self._json_data], array_str, Options())
+        self.assertEqual(Results.nested_order_list_with_fragment, "<ol><li><fragment>List Item 1</fragment><ol><li>List Item 1.1</li><li>List Item 1.2</li><li>List Item 1.3</li></ol></li></ol>")
+
+    def test_nested_unorder_list_in_supercharged_dict_to_html(self):
+        array_str = ['nested_unorder_list_with_fragment']
+        Utils.json_to_html([self._json_data], array_str, Options())
+        self.assertEqual(Results.nested_unorder_list_with_fragment, "<ul><li><fragment>List Item 1</fragment><ul><li>List Item 1.1</li><li>List Item 1.2</li><li>List Item 1.3</li></ul></li></ul>")
