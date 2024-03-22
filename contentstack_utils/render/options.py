@@ -115,7 +115,12 @@ class Options:
             return "<code>" + inner_html + "</code>"
         if node_type == 'fragment':
             return "<fragment>" + inner_html + "</fragment>"
-        if node_type in ['doc', 'reference']:
+        if node_type == 'reference':
+            if node_obj['attrs']['type'] == 'asset':
+                return "<img src=\"{}\" alt=\"{}\" class=\"{}\"  />{}".format(node_obj["attrs"]["asset-link"], node_obj["attrs"]["alt"], node_obj["attrs"]["class-name"], inner_html)
+            else:
+                return inner_html
+        if node_type == 'doc':
             return inner_html
         else:
             return inner_html
