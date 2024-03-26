@@ -1,6 +1,14 @@
 ================
 **CHANGELOG**
 ================
+
+*v1.3.0*
+============
+
+NEW FEATURE: Added Reference attribute.
+
+- added node attribute Reference
+
 *v1.2.3*
 ============
 

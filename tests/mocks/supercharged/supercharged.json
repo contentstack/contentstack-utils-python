@@ -1728,6 +1728,7 @@
           "asset-uid": "keystarting44asset",
           "content-type-uid": "sys_assets",
           "asset-link": "https://images.contentstack.com/v3/assets/51807f919e0e4/11.jpg",
+          "alt": "11.jpg",
           "asset-name": "11.jpg",
           "asset-type": "image/jpeg",
           "type": "asset",
