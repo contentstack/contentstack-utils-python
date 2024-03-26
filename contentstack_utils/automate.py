@@ -1,4 +1,5 @@
 import json
+
 from contentstack_utils.helper.converter import convert_style
 from contentstack_utils.helper.metadata import Metadata
 from contentstack_utils.helper.node_to_html import NodeToHtml
@@ -21,12 +22,6 @@ class Automate:
                 content = Automate._find_embedded_entry(items_array, metadata)
                 if content is not None:
                     return option.render_options(content, metadata)
-        else:
-            node_style = entry['type']
-            def call(children):
-                    return Automate._raw_processing(children, entry, option)
-            
-            return option.render_node(node_style, entry, callback=call)
         return ''
 
     @staticmethod
@@ -72,8 +67,9 @@ class Automate:
             return False
 
     @staticmethod
-    def find_embed_keys(entry, paths, option: Options, render_callback):
-        Automate.get_content(paths, entry, option, render_callback)
+    def find_embed_keys(entry, path, option: Options, render_callback):
+        keys = path.split('.')
+        Automate.get_content(keys, entry, option, render_callback)
 
     @staticmethod
     def get_content(keys_array, entry, option: Options, render_callback):
@@ -102,17 +98,9 @@ class Automate:
                     array_content.append(result)
                 return array_content
             if isinstance(content, dict):
-                content_entry = content[entry]
-                if isinstance(content_entry, dict):
-                    if 'type' and 'children' in content_entry:
-                        if content_entry['type']:
-                            return Automate._raw_processing(content_entry['children'], entry, option)
-                elif isinstance(content_entry, list):
-                    for entry_item in content_entry:
-                        if 'type' and 'children' in entry_item:
-                            if entry_item['type']:
-                                return Automate._raw_processing(entry_item['children'], entry, option)
-
+                if 'type' and 'children' in content:
+                    if content['type'] == 'doc':
+                        return Automate._raw_processing(content['children'], entry, option)
         return ''
 
     @staticmethod
@@ -133,7 +121,7 @@ class Automate:
             node_style = item['type']
             if node_style == 'reference':
                 metadata = Automate._return_metadata(item, node_style)
-                return Automate._str_from_embed_items(metadata=metadata, entry=item, option=option)
+                return Automate._str_from_embed_items(metadata=metadata, entry=entry, option=option)
             else:
                 def call(children):
                     return Automate._raw_processing(children, entry, option)

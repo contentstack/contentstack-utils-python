@@ -26,12 +26,12 @@ class TestGQLToHtml(unittest.TestCase):
 
     def test_read_entry_uid(self):
         entry = mock_entry()
-        self.assertEqual('sameple_uid', entry['srte']['json']['uid'])
+        self.assertEqual('sameple_uid', entry['srte']['json'][0]['uid'])
 
     def test_gql_to_html(self):
         entry = mock_entry()
         option = Options()
-        path_keys = ['json']
-        response = GQL.json_to_html(entry['srte'], path_keys, option)
-        self.assertEqual(response,
-                         '<p>sample text</p><img src="https://images.contentstack.com/v3/assets/51807f919e0e4/11.jpg" alt="11.jpg" class="embedded-asset"  />')
+        path_keys = ['srte']
+        GQL.json_to_html(entry, path_keys, option)
+        self.assertEqual(entry['srte'][0],
+                         '<p></p><div><p>Abcd Three</p><div><p>Content type: <span></span></p></div>')
