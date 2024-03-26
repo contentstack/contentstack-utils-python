@@ -87,8 +87,7 @@ class Utils(Automate):
             for entry in entry_obj:
                 return Utils.json_to_html(entry, key_path, option)
         if isinstance(entry_obj, dict):
+            render_callback = Automate._enumerate_content
             if key_path is not None:
                 for path in key_path:
-                    render_callback = Automate._enumerate_content(entry_obj, path, option)
-                    # Automate._find_embed_keys(entry_obj, path, option, render_callback) This method used in GQL class.
-            return render_callback
+                    Automate._find_embed_keys(entry_obj, path, option, render_callback)

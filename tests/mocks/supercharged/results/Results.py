@@ -22,7 +22,6 @@ orderListHtml = "<ol><li>Morbi in quam molestie, fermentum diam vitae, bibendum 
 unorderListHtml = "<ul><li>Sed quis metus sed mi hendrerit mollis vel et odio.</li><li>Integer vitae sem dignissim, " \
                   "elementum libero vel, fringilla massa.</li><li>Integer imperdiet arcu sit amet tortor faucibus " \
                   "aliquet.</li><li>Aenean scelerisque velit vitae dui vehicula, at congue massa sagittis.</li></ul>"
-refImgHtml = '<img src="https://images.contentstack.com/v3/assets/51807f919e0e4/11.jpg" alt="11.jpg" class="embedded-asset"  />'
 imgHtml = "<img src=\"https://images.contentstack.com/v3/assets/Donald.jog.png\" " \
           "/>"
 tableHtml = "<table><thead><tr><th><p>Header 1</p></th><th><p>Header 2</p></th></tr></thead><tbody><tr><td><p>Body " \

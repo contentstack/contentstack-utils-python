@@ -1,6 +1,6 @@
 import os
 
-from setuptools import setup, find_packages
+from setuptools import find_packages
 from distutils.core import setup
 
 with open(os.path.join(os.path.dirname(__file__), 'README.md')) as readme:
@@ -8,14 +8,14 @@ with open(os.path.join(os.path.dirname(__file__), 'README.md')) as readme:
 
 setup(
     name='contentstack_utils',
-    packages=find_packages(),
+    packages=find_packages(include=['contentstack']),
     description="contentstack_utils is a Utility package for Contentstack headless CMS with an API-first approach.",
     author='contentstack',
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/contentstack/contentstack-utils-python",
     license='MIT',
-    version='1.3.0',
+    version='1.2.3',
     install_requires=[
         
     ],
