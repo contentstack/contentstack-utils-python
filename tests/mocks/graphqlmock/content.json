@@ -1,6 +1,6 @@
 {
   "srte": {
-    "json": [
+    "json": 
       {
         "type": "doc",
         "attrs": {},
@@ -12,7 +12,7 @@
             "uid": "sameple_uid",
             "children": [
               {
-                "text": ""
+                "text": "sample text"
               }
             ]
           },
@@ -20,12 +20,18 @@
             "uid": "sameple_uid",
             "type": "reference",
             "attrs": {
-              "display-type": "block",
-              "type": "entry",
-              "class-name": "embedded-entry redactor-component block-entry",
-              "entry-uid": "145ae29d7b00e4",
-              "locale": "en-us",
-              "content-type-uid": "abcd"
+              "display-type": "display",
+              "asset-uid": "keystarting44asset",
+              "content-type-uid": "sys_assets",
+              "asset-link": "https://images.contentstack.com/v3/assets/51807f919e0e4/11.jpg",
+              "alt": "11.jpg",
+              "asset-name": "11.jpg",
+              "asset-type": "image/jpeg",
+              "type": "asset",
+              "class-name": "embedded-asset",
+              "width": 25.16914749661705,
+              "className": "dsd",
+              "id": "sdf"
             },
             "children": [
               {
@@ -35,8 +41,7 @@
           }
         ],
         "_version": 2
-      }
-    ],
+      },
     "embedded_itemsConnection": {
       "edges": [
         {

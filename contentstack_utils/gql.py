@@ -12,6 +12,7 @@ class GQL(Automate):
         if len(paths) > 0:
             for path in paths:
                 Automate.find_embed_keys(gql_entry, path, option, render_callback=GQL._json_matcher)
+                return Automate._enumerate_content(gql_entry, path, option)
 
     @staticmethod
     def __filter_content(content_dict):
