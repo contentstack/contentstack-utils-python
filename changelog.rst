@@ -1,12 +1,6 @@
 ================
 **CHANGELOG**
 ================
-*v1.2.3*
-============
-
-NEW FEATURE: Added Fragment attribute.
-
-- added new style attribute fragment
 
 *v1.3.0*
 ============
