@@ -30,88 +30,99 @@ class TestSuperchargedUtils(unittest.TestCase):
 
     def test_plaintext_in_supercharged_dict_to_html(self):
         array_str = ['plaintext']
-        Utils.json_to_html(self._json_data, array_str, Options())
-        self.assertEqual(Results.plainTextHtml, self._json_data['plaintext'])
+        response = Utils.json_to_html(self._json_data, array_str, Options())
+        self.assertEqual(Results.plainTextHtml, response)
 
     def test_plaintext_in_supercharged_list_to_html(self):
         array_str = ['plaintext_array']
-        Utils.json_to_html(self._json_data, array_str, Options())
-        self.assertEqual(Results.plainTextHtml, self._json_data['plaintext_array'][0])
+        response = Utils.json_to_html(self._json_data, array_str, Options())
+        self.assertEqual(Results.plainTextHtml, response)
 
     def test_paragraph_in_supercharged_dict_to_html(self):
         array_str = ['paragraph']
-        Utils.json_to_html([self._json_data], array_str, Options())
-        self.assertEqual(Results.paragraphHtml, self._json_data['paragraph'])
+        response = Utils.json_to_html([self._json_data], array_str, Options())
+        self.assertEqual(Results.paragraphHtml, response)
 
     def test_h1_in_supercharged_dict_to_html(self):
         array_str = ['h_one']
-        Utils.json_to_html([self._json_data], array_str, Options())
-        self.assertEqual(Results.h1Html, self._json_data['h_one'])
+        response = Utils.json_to_html([self._json_data], array_str, Options())
+        self.assertEqual(Results.h1Html, response)
 
     def test_h2_in_supercharged_dict_to_html(self):
         array_str = ['h_two']
-        Utils.json_to_html([self._json_data], array_str, Options())
-        self.assertEqual(Results.h2Html, self._json_data['h_two'])
+        response = Utils.json_to_html([self._json_data], array_str, Options())
+        self.assertEqual(Results.h2Html, response)
 
     def test_h3_in_supercharged_dict_to_html(self):
         array_str = ['h_three']
-        Utils.json_to_html([self._json_data], array_str, Options())
-        self.assertEqual(Results.h3Html, self._json_data['h_three'])
+        response = Utils.json_to_html([self._json_data], array_str, Options())
+        self.assertEqual(Results.h3Html, response)
 
     def test_h4_in_supercharged_dict_to_html(self):
         array_str = ['h_four']
-        Utils.json_to_html([self._json_data], array_str, Options())
-        self.assertEqual(Results.h4Html, self._json_data['h_four'])
+        response = Utils.json_to_html([self._json_data], array_str, Options())
+        self.assertEqual(Results.h4Html, response)
 
     def test_h5_in_supercharged_dict_to_html(self):
         array_str = ['h_five']
-        Utils.json_to_html([self._json_data], array_str, Options())
-        self.assertEqual(Results.h5Html, self._json_data['h_five'])
+        response = Utils.json_to_html([self._json_data], array_str, Options())
+        self.assertEqual(Results.h5Html, response)
 
     def test_h6_in_supercharged_dict_to_html(self):
         array_str = ['h_six']
-        Utils.json_to_html([self._json_data], array_str, Options())
-        self.assertEqual(Results.h6Html, self._json_data['h_six'])
+        response = Utils.json_to_html([self._json_data], array_str, Options())
+        self.assertEqual(Results.h6Html, response)
 
     def test_order_list_in_supercharged_dict_to_html(self):
         array_str = ['order_list']
-        Utils.json_to_html([self._json_data], array_str, Options())
-        self.assertEqual(Results.orderListHtml, self._json_data['order_list'])
+        response = Utils.json_to_html([self._json_data], array_str, Options())
+        self.assertEqual(Results.orderListHtml, response)
 
     def test_un_order_list_in_supercharged_dict_to_html(self):
         array_str = ['un_order_list']
-        Utils.json_to_html([self._json_data], array_str, Options())
-        self.assertEqual(Results.unorderListHtml, self._json_data['un_order_list'])
+        response = Utils.json_to_html([self._json_data], array_str, Options())
+        self.assertEqual(Results.unorderListHtml, response)
 
     def test_image_list_in_supercharged_dict_to_html(self):
         array_str = ['img']
-        Utils.json_to_html([self._json_data], array_str, Options())
-        self.assertEqual(Results.imgHtml, self._json_data['img'])
+        response = Utils.json_to_html([self._json_data], array_str, Options())
+        self.assertEqual(Results.imgHtml, response)
 
     def test_table_list_in_supercharged_dict_to_html(self):
         array_str = ['table']
-        Utils.json_to_html([self._json_data], array_str, Options())
-        self.assertEqual(Results.tableHtml, self._json_data['table'])
+        response = Utils.json_to_html([self._json_data], array_str, Options())
+        self.assertEqual(Results.tableHtml, response)
 
     def test_blockquote_list_in_supercharged_dict_to_html(self):
         array_str = ['blockquote']
-        Utils.json_to_html([self._json_data], array_str, Options())
-        self.assertEqual(Results.blockquoteHtml, self._json_data['blockquote'])
+        response = Utils.json_to_html([self._json_data], array_str, Options())
+        self.assertEqual(Results.blockquoteHtml, response)
 
     def test_code_list_in_supercharged_dict_to_html(self):
         array_str = ['code']
-        Utils.json_to_html([self._json_data], array_str, Options())
-        self.assertEqual(Results.codeHtml, self._json_data['code'])
+        response = Utils.json_to_html([self._json_data], array_str, Options())
+        self.assertEqual(Results.codeHtml, response)
 
     def test_linkin_list_in_supercharged_dict_to_html(self):
         array_str = ['link']
-        Utils.json_to_html([self._json_data], array_str, Options())
-        self.assertEqual(Results.linkInPHtml, self._json_data['link'])
+        response = Utils.json_to_html([self._json_data], array_str, Options())
+        self.assertEqual(Results.linkInPHtml, response)
 
-    # def test_reference_list_in_supercharged_dict_to_html(self):
-    #     array_str = ['reference']
-    #     Utils.json_to_html([self._json_data], array_str, Options())
-    #     self.assertEqual(Results.linkInPHtml, self._json_data['reference'])
+    def test_reference_list_in_supercharged_dict_to_html(self):
+        array_str = ['reference']
+        response = response = Utils.json_to_html([self._json_data], array_str, Options())
+        self.assertEqual(Results.refImgHtml, response)
+    
+    def test_nested_order_list_in_supercharged_dict_to_html(self):
+        array_str = ['nested_order_list_with_fragment']
+        Utils.json_to_html([self._json_data], array_str, Options())
+        self.assertEqual(Results.nested_order_list_with_fragment, "<ol><li><fragment>List Item 1</fragment><ol><li>List Item 1.1</li><li>List Item 1.2</li><li>List Item 1.3</li></ol></li></ol>")
+
+
+    def test_reference_list_in_supercharged_dict_to_html(self):
+         array_str = ['reference']
+         Utils.json_to_html([self._json_data], array_str, Options())
+         self.assertEqual(Results.linkInPHtml, self._json_data['reference'])
     
     def test_nested_order_list_in_supercharged_dict_to_html(self):
         array_str = ['nested_order_list_with_fragment']
