@@ -118,7 +118,6 @@ class TestSuperchargedUtils(unittest.TestCase):
         Utils.json_to_html([self._json_data], array_str, Options())
         self.assertEqual(Results.nested_order_list_with_fragment, "<ol><li><fragment>List Item 1</fragment><ol><li>List Item 1.1</li><li>List Item 1.2</li><li>List Item 1.3</li></ol></li></ol>")
 
-
     def test_reference_image_in_supercharged_dict_to_html(self):
          array_str = ['reference']
          result = Utils.json_to_html([self._json_data], array_str, Options())
