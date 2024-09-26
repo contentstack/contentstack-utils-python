@@ -1,12 +1,14 @@
 ================
 **CHANGELOG**
 ================
-*v1.2.3*
+
+
+*v1.3.1*
 ============
 
-NEW FEATURE: Added Fragment attribute.
+Bug Fix: Fixed Link type attributes.
 
-- added new style attribute fragment
+- Fixed link type attribute issue
 
 *v1.3.0*
 ============
