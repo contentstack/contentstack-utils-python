@@ -120,8 +120,8 @@ class TestSuperchargedUtils(unittest.TestCase):
 
     def test_reference_image_in_supercharged_dict_to_html(self):
          array_str = ['reference']
-         result = Utils.json_to_html([self._json_data], array_str, Options())
-         self.assertEqual(Results.refImgHtml, result)
+         response = Utils.json_to_html([self._json_data], array_str, Options())
+         self.assertEqual(Results.refImgHtml, response)
     
     def test_nested_order_list_in_supercharged_dict_to_html(self):
         array_str = ['nested_order_list_with_fragment']
