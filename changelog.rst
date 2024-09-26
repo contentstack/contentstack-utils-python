@@ -2,6 +2,15 @@
 **CHANGELOG**
 ================
 
+
+*v1.3.1*
+============
+
+Bug Fix: Fixed Link type attributes.
+
+- Fixed link type attribute issue
+
+
 *v1.3.0*
 ============
 

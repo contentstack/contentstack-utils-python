@@ -15,7 +15,7 @@ setup(
     long_description_content_type="text/markdown",
     url="https://github.com/contentstack/contentstack-utils-python",
     license='MIT',
-    version='1.3.0',
+    version='1.3.1',
     install_requires=[
         
     ],
