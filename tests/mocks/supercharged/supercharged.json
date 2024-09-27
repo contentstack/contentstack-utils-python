@@ -1698,7 +1698,7 @@
             "uid": "removed_for_security_reasons",
             "type": "a",
             "attrs": {
-              "href": "LINK.com",
+              "url": "LINK.com",
               "target": "_self"
             },
             "children": [

@@ -70,7 +70,7 @@ class Options:
         if node_type == 'p':
             return "<p>" + inner_html + "</p>"
         if node_type == 'a':
-            return "<a href=\"{}\">{}</a>".format(node_obj["attrs"]["href"], inner_html)
+            return "<a href=\"{}\">{}</a>".format(node_obj["attrs"]["url"], inner_html)
         if node_type == 'img':
             return "<img src=\"{}\" />{}".format(node_obj["attrs"]["src"], inner_html)
         if node_type == 'embed':

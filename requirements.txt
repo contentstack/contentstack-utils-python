@@ -1,4 +1,4 @@
 pip~=23.3
-setuptools~=68.2.0
+setuptools~=70.0.0
 lxml~=4.9.3
 pylint~=3.0.3
