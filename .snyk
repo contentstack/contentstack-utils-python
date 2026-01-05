@@ -1,0 +1,4 @@
+version: v1.3.3
+language-settings:
+  python:
+    version: "3.12" 
