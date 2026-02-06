@@ -2,6 +2,11 @@
 **CHANGELOG**
 ================
 
+*v1.3.3*
+============
+
+Bug Fix: Fixed security issues.
+
 *v1.3.2*
 ============
 
