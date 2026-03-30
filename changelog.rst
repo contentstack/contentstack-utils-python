@@ -2,6 +2,14 @@
 **CHANGELOG**
 ================
 
+*v1.4.0*
+============
+
+NEW FEATURE: Variants utility (CDA entry variant aliases).
+
+- Added ``Utils.get_variant_aliases`` to read variant alias strings from ``publish_details.variants`` on a CDA entry (single dict or list of entries). Supports optional ``content_type_uid`` when ``_content_type_uid`` is absent on the entry.
+- Added ``Utils.get_variant_metadata_tags`` to build a ``data-csvariants`` HTML data-attribute value (JSON string of the multi-entry alias results).
+
 *v1.3.3*
 ============
 
