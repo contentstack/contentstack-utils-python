@@ -2,6 +2,25 @@
 **CHANGELOG**
 ================
 
+*v1.5.0*
+============
+
+NEW FEATURE: Variants utility (CDA entry variant aliases).
+
+- Added ``Utils.get_variant_aliases`` to read variant alias strings from ``publish_details.variants`` on a CDA entry (single dict or list of entries). Supports optional ``content_type_uid`` when ``_content_type_uid`` is absent on the entry.
+- Added ``Utils.get_variant_metadata_tags`` to build a ``data-csvariants`` HTML data-attribute value (JSON string of the multi-entry alias results).
+
+NEW FEATURE: Live Preview editable tags (CSLP).
+
+- Added JS-parity editable tagging helpers in ``contentstack_utils/entry_editable.py``.
+- Added ``addEditableTags`` / ``addTags`` to mutate an entry with a ``$`` map of CSLP tags (supports nested objects, arrays, references, and applied variants; normalizes case for ``contentTypeUid`` and locale similar to JS).
+- Added ``getTag`` helper for building tag maps recursively.
+- Exported ``addEditableTags``, ``addTags``, and ``getTag`` at package level, and delegated via ``Utils`` for backward compatibility.
+
+BUG FIX: Test compatibility.
+
+- Fixed deprecated unittest assertion usage in ``tests/convert_style.py`` for newer Python versions.
+
 *v1.4.0*
 ============
 
