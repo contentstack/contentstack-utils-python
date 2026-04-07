@@ -1,19 +1,48 @@
 ---
 name: code-review
-description: PR review for contentstack_utils — public API, __all__, lxml/deps, pytest.
+description: PR checklist—public API, __all__, semver, lxml/deps, pytest, secrets; aligns with JS utils where applicable.
 ---
 
-# Code review — `contentstack_utils`
+# Code review – Contentstack Utils Python
 
-## Checklist
+## When to use
 
-- [ ] **API:** New or changed **`Utils`** / **`Options`** / tag helpers reflected in **`contentstack_utils/__init__.py`** **`__all__`** and **README** if user-facing.
-- [ ] **Version:** **`setup.py` `version`** bumped when releasing behavioral or API changes (semver).
-- [ ] **Dependencies:** Any new **`install_requires`** entry documented; **`lxml`** usage stays appropriate for parsing/rendering.
-- [ ] **Tests:** **`pytest`** passes; add tests under **`tests/`** for new behavior.
-- [ ] **Secrets:** No tokens in repo; examples use placeholders only.
+- Reviewing a PR, self-review before submit, or automated review prompts.
+
+## Instructions
+
+Work through the checklist below. Optionally tag findings: **Blocker**, **Major**, **Minor**.
+
+### Public API
+
+- [ ] **`contentstack_utils/__init__.py`** **`__all__`** and exports match **README** examples and intended surface (**`Utils`**, **`Options`**, **`GQL`**, **`Automate`**, embed types, **`addEditableTags`** / **`addTags`** / **`getTag`**).
+- [ ] **JS parity** — where methods mirror the JS utils SDK, **parameter names** and behavior stay consistent unless a documented breaking change.
+
+### Compatibility
+
+- [ ] No breaking **`Utils`** / **`Options`** / tag helpers without a **semver** plan; **`setup.py` `version`** bumped for user-visible changes.
+
+### Dependencies
+
+- [ ] **`lxml`** usage stays bounded to parsing/rendering paths; new **`install_requires`** documented in **README** / changelog.
+
+### Tests
+
+- [ ] **`pytest`** passes; tests added or extended under **`tests/`** for new behavior and edge cases.
+
+### Security
+
+- [ ] No hardcoded tokens; no logging of secrets in new code.
+
+### Severity (optional)
+
+| Level | Examples |
+|-------|----------|
+| **Blocker** | Breaking public API without approval; security issue; no tests where practical |
+| **Major** | Inconsistent behavior vs documented API; README examples wrong |
+| **Minor** | Style; minor docs |
 
 ## References
 
-- `.cursor/rules/code-review.mdc`
-- `.cursor/rules/dev-workflow.md`
+- **`skills/testing/SKILL.md`**
+- **`skills/contentstack-utils/SKILL.md`**
