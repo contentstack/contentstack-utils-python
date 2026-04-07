@@ -1,9 +1,14 @@
 ---
 name: framework
-description: lxml and companion Contentstack Python SDK — how utils fits in the stack.
+description: lxml parsing layers, setup.py install_requires, companion Contentstack Python SDK handoff.
 ---
 
-# Framework skill — `lxml` + Contentstack Python ecosystem
+# Framework / integration – Contentstack Utils Python
+
+## When to use
+
+- Changing HTML/XML parsing behavior or **`lxml`** touchpoints.
+- Adding runtime dependencies or documenting **`install_requires`**.
 
 ## Integration points
 
@@ -19,7 +24,7 @@ description: lxml and companion Contentstack Python SDK — how utils fits in th
 
 - **Unit** — **`tests/test_*.py`** with mocks under **`tests/mocks/`** where applicable.
 
-## Rule shortcut
+## References
 
-- `.cursor/rules/contentstack-utils-python.mdc`
-- `.cursor/rules/python.mdc`
+- **`skills/python-style/SKILL.md`**
+- **`skills/dev-workflow/SKILL.md`**

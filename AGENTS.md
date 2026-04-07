@@ -1,14 +1,14 @@
-# AGENTS.md — AI / automation context
+# Contentstack Utils Python – Agent guide
 
-## Project
+**Universal entry point** for anyone automating or assisting work in this repo—AI agents (Cursor, Copilot, CLI tools), reviewers, and contributors. Conventions and detailed guidance live in **`skills/*/SKILL.md`**, not in editor-specific config, so the same instructions apply whether or not you use Cursor.
 
-| | |
-|---|---|
-| **Name** | **`contentstack_utils`** (PyPI) — **Contentstack Python Utils SDK** |
-| **Purpose** | Utilities for **Contentstack** headless CMS: **RTE / embedded** rendering (`Utils`, `Options`), **GQL** helpers, **editable tags** on entries, HTML/metadata helpers. Often used alongside the **`Contentstack`** Python delivery package. |
-| **Repository** | [contentstack/contentstack-utils-python](https://github.com/contentstack/contentstack-utils-python.git) |
+## What this repo is
 
-## Tech stack
+- **Name:** [contentstack-utils-python](https://github.com/contentstack/contentstack-utils-python) — **`contentstack_utils`** on PyPI (**Contentstack Python Utils SDK**).
+- **Purpose:** Utilities for **Contentstack** headless CMS: **RTE / embedded** rendering (`Utils`, `Options`), **GQL** helpers, **editable tags** on entries, HTML/metadata helpers. Often used alongside the **Contentstack** Python delivery package.
+- **Out of scope:** This package does **not** ship HTTP clients or stack credentials. Apps fetch content with the [Content Delivery API](https://www.contentstack.com/docs/developers/apis/content-delivery-api/) / Python SDK, then pass field data into **`Utils`**.
+
+## Tech stack (at a glance)
 
 | Area | Details |
 |------|---------|
@@ -32,7 +32,7 @@
 | `contentstack_utils/__init__.py` | Public exports — keep **`__all__`** aligned with documented API |
 | `tests/` | pytest modules (`test_*.py`), mocks under `tests/mocks/` |
 
-## Common commands
+## Commands (quick reference)
 
 ```bash
 python -m venv .venv && source .venv/bin/activate  # or equivalent on Windows
@@ -47,9 +47,21 @@ coverage run -m pytest && coverage report -m
 
 - Do not commit **API keys**, **delivery tokens**, or other secrets. Examples in **`README.md`** use placeholders only.
 
-## Further guidance
+## Where the real documentation lives: skills
 
-- **Cursor rules:** [`.cursor/rules/README.md`](.cursor/rules/README.md)
-- **Skills:** [`skills/README.md`](skills/README.md)
+Read these **`SKILL.md` files** for full conventions—**this is the source of truth** for implementation and review:
 
-Product docs: [Content Delivery API](https://www.contentstack.com/docs/developers/apis/content-delivery-api/).
+| Skill | Path | What it covers |
+|-------|------|----------------|
+| **Development workflow** | [`skills/dev-workflow/SKILL.md`](skills/dev-workflow/SKILL.md) | Branches, CI, venv, **pytest**, ruff/black/flake8, PR expectations |
+| **Contentstack Utils (SDK)** | [`skills/contentstack-utils/SKILL.md`](skills/contentstack-utils/SKILL.md) | **`Utils`**, **`Options`**, RTE/embedded, **GQL**, editable tags, JS parity, semver |
+| **Python style & layout** | [`skills/python-style/SKILL.md`](skills/python-style/SKILL.md) | Package layout, typing, imports, **`lxml`**, **`setup.py`**, security |
+| **Testing** | [`skills/testing/SKILL.md`](skills/testing/SKILL.md) | **pytest** layout, coverage, **`tests/mocks/`**, hygiene |
+| **Code review** | [`skills/code-review/SKILL.md`](skills/code-review/SKILL.md) | PR checklist (API, **`__all__`**, deps, tests, secrets) |
+| **Framework / integration** | [`skills/framework/SKILL.md`](skills/framework/SKILL.md) | **`lxml`**, companion **Contentstack** Python SDK, dependency boundaries |
+
+An index with short “when to use” hints is in [`skills/README.md`](skills/README.md).
+
+## Using Cursor
+
+If you use **Cursor**, [`.cursor/rules/README.md`](.cursor/rules/README.md) only points to **`AGENTS.md`**—same source of truth as everyone else; no separate `.mdc` rule files.

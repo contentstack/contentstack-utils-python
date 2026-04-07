@@ -1,12 +1,14 @@
 ---
-description: "Python conventions for contentstack_utils package and setup"
-globs:
-  - "contentstack_utils/**/*.py"
-  - "setup.py"
-alwaysApply: false
+name: python-style
+description: Python layout for contentstack_utils, typing, lxml usage, setup.py, packaging.
 ---
 
-# Python — `contentstack_utils`
+# Python style and repo layout – Contentstack Utils Python
+
+## When to use
+
+- Editing any Python under **`contentstack_utils/`** or **`setup.py`**.
+- Adding modules or changing how **`lxml`** is used.
 
 ## Layout
 
@@ -32,3 +34,8 @@ alwaysApply: false
 ## Security
 
 - Do not log **delivery tokens**, **API keys**, or stack secrets.
+
+## References
+
+- **`skills/contentstack-utils/SKILL.md`** — public API and features.
+- **`skills/framework/SKILL.md`** — **`lxml`** and SDK integration.
