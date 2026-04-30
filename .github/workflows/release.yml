@@ -1,4 +1,4 @@
-# This workflow will upload a Python Package using Twine when a release is created
+# This workflow uploads a Python package when a GitHub Release is created for a version tag.
 # For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-python#publishing-to-package-registries
 
 # This workflow uses actions that are not certified by GitHub.
@@ -10,18 +10,20 @@ name: Upload Python Package
 
 on:
   release:
-    types: [published]
+    types: [created]
 
 permissions:
   contents: read
 
 jobs:
   deploy:
-
+    if: ${{ startsWith(github.event.release.tag_name, 'v') && !github.event.release.draft }}
     runs-on: ubuntu-latest
 
     steps:
     - uses: actions/checkout@v5
+      with:
+        ref: ${{ github.event.release.tag_name }}
     - name: Set up Python
       uses: actions/setup-python@v5
       with:
