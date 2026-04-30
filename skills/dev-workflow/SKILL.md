@@ -8,7 +8,7 @@ description: Branches, CI, venv, pytest, lint—standard workflow for Contentsta
 ## When to use
 
 - Setting up locally, opening a PR, or aligning with CI.
-- Answering “how do we run tests?” or “which branch targets `master`?”
+- Answering “how do we run tests?” or “which branch targets `development` or `master`?”
 
 ## Before a PR
 
@@ -19,7 +19,7 @@ description: Branches, CI, venv, pytest, lint—standard workflow for Contentsta
 
 ## Branching
 
-- Follow org conventions: **`development`** / **`staging`** / **`master`**; PRs to **`master`** may be restricted (see **`.github/workflows/check-branch.yml`**). Confirm with your team before opening PRs to **`master`**.
+- Follow direct-flow conventions: feature/fix PRs target **`development`**, and release PRs are raised from **`development`** to **`master`**.
 
 ## Links
 

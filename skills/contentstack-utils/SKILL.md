@@ -8,7 +8,7 @@ description: Public API—Utils, Options, RTE/embedded, GQL, editable tags; JS p
 ## When to use
 
 - Implementing or changing RTE/HTML rendering, embedded resolution, **GQL**, or editable-tag behavior.
-- Updating **`README.md`** / **`changelog.rst`** / **`setup.py`** for user-visible behavior.
+- Updating **`README.md`** / **`CHANGELOG.md`** / **`setup.py`** for user-visible behavior.
 - Assessing semver impact of **`__init__.py`** exports and public classes.
 
 ## Core entry points
