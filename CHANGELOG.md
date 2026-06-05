@@ -1,5 +1,17 @@
 # Changelog
 
+## v1.6.0 (2026-06-05)
+
+### New feature: Multi-region endpoint resolution
+
+- Added `Endpoint.get_contentstack_endpoint()` for dynamic region-aware URL resolution across all Contentstack regions and services.
+- Added `Utils.get_contentstack_endpoint()` proxy for backward-compatible access via the existing `Utils` import path.
+- Added `getContentstackEndpoint` camelCase alias on both `Endpoint` and `Utils` for cross-SDK parity.
+- Bundled `contentstack_utils/assets/regions.json` — the authoritative registry of 7 regions (AWS NA/EU/AU, Azure NA/EU, GCP NA/EU) and 18 service endpoint keys.
+- Added runtime fallback in `Endpoint._load_regions()` — downloads `regions.json` from `artifacts.contentstack.com` on first use when the file is absent.
+- Added `scripts/refresh_regions.py` to manually pull the latest regions from Contentstack .
+- Exported `Endpoint` at package level in `__all__`.
+
 ## v1.5.0
 
 ### New feature: Variants utility (CDA entry variant aliases)
