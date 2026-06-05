@@ -1,7 +1,5 @@
 """
 Tests for contentstack_utils.endpoint.Endpoint and the Utils proxy.
-
-Mirrors the PHP EndpointTest.php suite for cross-SDK consistency.
 """
 
 import pytest

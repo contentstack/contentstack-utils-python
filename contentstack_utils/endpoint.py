@@ -118,10 +118,7 @@ class Endpoint:
         endpoints = dict(region_row["endpoints"])
         return Endpoint._strip_https_from_map(endpoints) if omit_https else endpoints
 
-    # ------------------------------------------------------------------
-    # JS/PHP parity alias — lets callers use the same camelCase name
-    # across all Contentstack SDK languages without a lookup.
-    # ------------------------------------------------------------------
+
     getContentstackEndpoint = get_contentstack_endpoint
 
     @staticmethod

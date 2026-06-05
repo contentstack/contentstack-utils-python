@@ -6,7 +6,6 @@ bundled copy at contentstack_utils/assets/regions.json.
 Usage:
     python3 scripts/refresh_regions.py
 
-Mirrors the ``composer refresh-regions`` command in the PHP SDK.
 Run this whenever Contentstack adds a new region or service, then commit the
 updated file so all consumers get the change on their next install.
 """

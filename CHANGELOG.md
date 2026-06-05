@@ -6,10 +6,10 @@
 
 - Added `Endpoint.get_contentstack_endpoint()` for dynamic region-aware URL resolution across all Contentstack regions and services.
 - Added `Utils.get_contentstack_endpoint()` proxy for backward-compatible access via the existing `Utils` import path.
-- Added `getContentstackEndpoint` camelCase alias on both `Endpoint` and `Utils` for cross-SDK parity with the PHP and JS implementations.
+- Added `getContentstackEndpoint` camelCase alias on both `Endpoint` and `Utils` for cross-SDK parity.
 - Bundled `contentstack_utils/assets/regions.json` — the authoritative registry of 7 regions (AWS NA/EU/AU, Azure NA/EU, GCP NA/EU) and 18 service endpoint keys.
 - Added runtime fallback in `Endpoint._load_regions()` — downloads `regions.json` from `artifacts.contentstack.com` on first use when the file is absent.
-- Added `scripts/refresh_regions.py` to manually pull the latest regions from Contentstack (equivalent of `composer refresh-regions` in the PHP SDK).
+- Added `scripts/refresh_regions.py` to manually pull the latest regions from Contentstack .
 - Exported `Endpoint` at package level in `__all__`.
 
 ## v1.5.0
