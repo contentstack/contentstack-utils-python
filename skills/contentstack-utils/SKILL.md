@@ -1,47 +1,44 @@
 ---
 name: contentstack-utils
-description: Public API—Utils, Options, RTE/embedded, GQL, editable tags; JS parity; no bundled HTTP client.
+description: Use for Utils, Options, RTE/embedded rendering, GQL, editable tags, JS parity, and semver in contentstack-utils-python.
 ---
 
-# Contentstack Utils – SDK skill
+# Contentstack Utils SDK – Contentstack Utils Python
 
 ## When to use
 
-- Implementing or changing RTE/HTML rendering, embedded resolution, **GQL**, or editable-tag behavior.
-- Updating **`README.md`** / **`CHANGELOG.md`** / **`setup.py`** for user-visible behavior.
-- Assessing semver impact of **`__init__.py`** exports and public classes.
+- Implementing or changing RTE/HTML rendering, embedded resolution, GQL, or editable-tag behavior.
+- Updating `README.md` / `changelog.rst` / `setup.py` for user-visible behavior.
+- Assessing semver impact of `__init__.py` exports and public classes.
 
-## Core entry points
+## Instructions
 
-- **`Utils`** — **`contentstack_utils.utils`**: **`render_content`**, **`render`**, embedded/RTE resolution; subclasses **`Automate`**.
-- **`Options`** — **`contentstack_utils.render.options`**: rendering configuration passed into **`Utils`** methods.
-- **Editable tags** — **`entry_editable`**: **`addEditableTags`**, **`addTags`**, **`getTag`**; also exposed as **`Utils.addEditableTags`** / **`Utils.addTags`** / **`Utils.getTag`** for parity.
+### Core entry points
 
-## Features
+- **`Utils`** — `contentstack_utils.utils`: `render_content`, `render`, embedded/RTE resolution; subclasses `Automate`.
+- **`Options`** — `contentstack_utils.render.options`: rendering configuration passed into `Utils` methods.
+- **Editable tags** — `entry_editable`: `addEditableTags`, `addTags`, `getTag`; also exposed as `Utils.addEditableTags` / `Utils.addTags` / `Utils.getTag` for parity.
 
-- **Embedded / RTE** — JSON and HTML paths through **`Utils`** and **`Automate`**; **metadata** via **`Metadata`**.
-- **Styles** — **`convert_style`** and **embedded** **StyleType** / **ItemType** where applicable.
-- **GQL** — **`GQL`** in **`gql.py`** for GraphQL-oriented HTML/helpers.
+### Features
 
-## Public API and docs
+- **Embedded / RTE** — JSON and HTML paths through `Utils` and `Automate`; metadata via `Metadata`.
+- **Styles** — `convert_style` and embedded `StyleType` / `ItemType` where applicable.
+- **GQL** — `GQL` in `gql.py` for GraphQL-oriented HTML/helpers.
 
-- **`contentstack_utils/__init__.py`** **`__all__`** and exports must match **README** examples and intended surface (**`Utils`**, **`Options`**, **`GQL`**, **`Automate`**, embed types, tag helpers).
-- **JS parity** — where methods mirror the JS utils SDK, keep **parameter names** and behavior consistent unless a documented breaking change.
+### Public API and docs
 
-## Compatibility
+- `contentstack_utils/__init__.py` `__all__` and exports must match README examples and intended surface (`Utils`, `Options`, `GQL`, `Automate`, embed types, tag helpers).
+- **JS parity** — where methods mirror the JS utils SDK, keep parameter names and behavior consistent unless a documented breaking change.
 
-- Avoid breaking **`Utils`** / **`Options`** / tag helpers without a **semver** plan; bump **`setup.py` `version`** for user-visible changes.
+### Compatibility
 
-## Dependencies
+- Avoid breaking `Utils` / `Options` / tag helpers without a semver plan; bump `setup.py` `version` for user-visible changes.
 
-- **`lxml`** usage stays bounded to parsing/rendering paths; note any new **`install_requires`** in **README** / changelog if added to **`setup.py`**.
+### Dependencies
 
-## No network layer
+- `lxml` usage stays bounded to parsing/rendering paths; note any new `install_requires` in README / changelog if added to `setup.py`.
 
-- This package does **not** ship HTTP clients or tokens.
-- Consumers often use **`contentstack.Stack`** (**Contentstack** package) to fetch entries, then **`Utils.render`** / **`Utils.render_content`** — keep **README** examples accurate.
+### No network layer
 
-## References
-
-- [Content Delivery API](https://www.contentstack.com/docs/developers/apis/content-delivery-api/)
-- **`skills/python-style/SKILL.md`**, **`skills/framework/SKILL.md`**
+- This package does not ship HTTP clients or tokens.
+- Consumers often use `contentstack.Stack` to fetch entries, then `Utils.render` / `Utils.render_content` — keep README examples accurate.

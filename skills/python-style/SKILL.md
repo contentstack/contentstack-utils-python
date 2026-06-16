@@ -1,41 +1,38 @@
 ---
 name: python-style
-description: Python layout for contentstack_utils, typing, lxml usage, setup.py, packaging.
+description: Use for contentstack_utils/ layout, typing, lxml usage, setup.py, and packaging conventions.
 ---
 
 # Python style and repo layout – Contentstack Utils Python
 
 ## When to use
 
-- Editing any Python under **`contentstack_utils/`** or **`setup.py`**.
-- Adding modules or changing how **`lxml`** is used.
+- Editing any Python under `contentstack_utils/` or `setup.py`.
+- Adding modules or changing how `lxml` is used.
 
-## Layout
+## Instructions
 
-- **`contentstack_utils/utils.py`** — **`Utils`** class (rendering, embedded items); delegates **editable tag** static methods to **`entry_editable`**.
-- **`contentstack_utils/render/`** — **`Options`** and render-related code.
-- **`contentstack_utils/helper/`** — **Metadata**, **NodeToHtml**, **converter**.
-- **`contentstack_utils/embedded/`** — **ItemType**, **StyleType**.
-- **`contentstack_utils/gql.py`**, **`automate.py`**, **`entry_editable.py`** — feature modules.
+### Layout
 
-## Style
+- `contentstack_utils/utils.py` — `Utils` class (rendering, embedded items); delegates editable tag static methods to `entry_editable`.
+- `contentstack_utils/render/` — `Options` and render-related code.
+- `contentstack_utils/helper/` — `Metadata`, `NodeToHtml`, `converter`.
+- `contentstack_utils/embedded/` — `ItemType`, `StyleType`.
+- `contentstack_utils/gql.py`, `automate.py`, `entry_editable.py` — feature modules.
 
-- Match existing patterns: **typing** hints where already used; **pylint** pragmas only where established.
-- Prefer **small, focused** changes; avoid drive-by refactors unrelated to the task.
+### Style
 
-## Imports
+- Match existing patterns: typing hints where already used; pylint pragmas only where established.
+- Prefer small, focused changes; avoid drive-by refactors unrelated to the task.
 
-- **`lxml.etree`** — HTML/XML parsing in **`utils`** and helpers; keep usage consistent with existing error handling.
+### Imports
 
-## Packaging
+- `lxml.etree` — HTML/XML parsing in `utils` and helpers; keep usage consistent with existing error handling.
 
-- **`setup.py`** — **`name`**, **`version`**, **`packages=find_packages()`**; keep **`install_requires`** accurate if dependencies change.
+### Packaging
 
-## Security
+- `setup.py` — `name`, `version`, `packages=find_packages()`; keep `install_requires` accurate if dependencies change.
 
-- Do not log **delivery tokens**, **API keys**, or stack secrets.
+### Security
 
-## References
-
-- **`skills/contentstack-utils/SKILL.md`** — public API and features.
-- **`skills/framework/SKILL.md`** — **`lxml`** and SDK integration.
+- Do not log delivery tokens, API keys, or stack secrets.
