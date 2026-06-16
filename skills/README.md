@@ -13,7 +13,4 @@
 | **code-review** | PR checklist, public API / **`__all__`**, dependencies, security |
 | **framework** | **`lxml`** integration, delivery SDK handoff, parsing impact |
 
-## How to use these docs
-
-- **Humans / any AI tool:** Start at **`AGENTS.md`**, then open the relevant **`skills/<name>/SKILL.md`**.
-- **Cursor users:** **`.cursor/rules/README.md`** only points to **`AGENTS.md`** so guidance stays universal—no duplicate `.mdc` rule sets.
+Each folder contains `SKILL.md` with YAML frontmatter (`name`, `description`).
