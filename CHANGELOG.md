@@ -1,6 +1,6 @@
 # Changelog
 
-## v1.6.0 (2026-06-0)
+## v1.6.0 (2026-06-22)
 
 ### New feature: Multi-region endpoint resolution
 
