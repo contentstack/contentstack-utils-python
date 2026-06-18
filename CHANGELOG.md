@@ -9,7 +9,7 @@
 - Added `getContentstackEndpoint` camelCase alias on both `Endpoint` and `Utils` for cross-SDK parity.
 - Bundled `contentstack_utils/assets/regions.json` — the authoritative registry of 7 regions (AWS NA/EU/AU, Azure NA/EU, GCP NA/EU) and 18 service endpoint keys.
 - Added runtime fallback in `Endpoint._load_regions()` — downloads `regions.json` from `artifacts.contentstack.com` on first use when the file is absent.
-- Added `scripts/refresh_regions.py` to manually pull the latest regions from Contentstack.
+- Added `scripts/refresh_regions.py` (source-tree only) and `python3 -m contentstack_utils.region_refresh` (installed package CLI) to manually pull the latest regions from Contentstack.
 - Exported `Endpoint` at package level in `__all__`.
 - Added `refresh_regions()` utility to programmatically download the latest regions manifest from the Contentstack CDN and overwrite the bundled `assets/regions.json`.
 - Exposed `refresh_regions` at the package level (`from contentstack_utils import refresh_regions`) for use in CI pipelines and tooling.
