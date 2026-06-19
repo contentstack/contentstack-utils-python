@@ -250,14 +250,12 @@ class TestUtilsProxy:
 # ---------------------------------------------------------------------------
 
 class TestCache:
-    def test_second_call_uses_cache(self, mocker):
-        # Prime the cache with the first call, then spy on open() to confirm
-        # the second call does NOT read the file again.
+    def test_second_call_uses_cache(self, reset_cache):
+        from unittest.mock import patch, MagicMock
         Endpoint.get_contentstack_endpoint("na", "contentDelivery")
-        spy = mocker.patch("builtins.open", wraps=open)
-        Endpoint.get_contentstack_endpoint("eu", "contentDelivery")
-        # The cached path must not trigger any file reads.
-        spy.assert_not_called()
+        with patch("builtins.open", wraps=open) as spy:
+            Endpoint.get_contentstack_endpoint("eu", "contentDelivery")
+            spy.assert_not_called()
 
     def test_reset_cache_clears_data(self):
         Endpoint.get_contentstack_endpoint("na")  # primes cache
