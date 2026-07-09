@@ -14,24 +14,62 @@ The latest version of [PyCharm](https://www.jetbrains.com/pycharm/download/) or 
 
 ## SDK Installation and Setup
 
-To set up Python Utils SDK, Go to terminal and locate the virtual environment path and type below.
+### Install from PyPI
 
-```python
-   pip install contentstack_utils
+The package is published on PyPI as **`contentstack-utils`** (hyphen). Import it in Python as **`contentstack_utils`** (underscore):
+
+```bash
+pip install contentstack-utils
 ```
 
-If you are using Contentstack Python SDK in your project by running the following commands,  then “contentstack_utils”  is already imported into your project.
+Runtime dependencies (including **`lxml`**, required for HTML rendering) are installed automatically.
+
+### Install for local development
+
+Clone the repository, create a virtual environment, then install the package in editable mode with dev tools (pytest, linters):
+
+```bash
+git clone https://github.com/contentstack/contentstack-utils-python.git
+cd contentstack-utils-python
+python -m venv .venv
+source .venv/bin/activate  # Windows: .venv\Scripts\activate
+pip install -e ".[dev]"
+```
+
+Alternatively, install the package and dev dependencies separately:
+
+```bash
+pip install -e .
+pip install -r requirements.txt
+```
+
+### Run tests
+
+```bash
+pytest
+```
+
+Test discovery and defaults are configured in `pyproject.toml` under `[tool.pytest]`.
+
+### Use with the Contentstack Python SDK
+
+If you install the main Contentstack Python SDK, you may still need **`contentstack-utils`** separately depending on your SDK version and how dependencies are declared:
+
+```bash
+pip install contentstack
+pip install contentstack-utils
+```
 
 ## For the latest version
 
-```python
-   pip install Contentstack
+```bash
+pip install contentstack
 ```
 
 ## For the specific version
 
-```python
-   pip install Contentstack==1.5.1
+```bash
+pip install contentstack==1.5.1
 ```
 
 ## Usage
