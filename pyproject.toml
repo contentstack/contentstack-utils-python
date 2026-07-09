@@ -51,7 +51,8 @@ include = ["contentstack_utils*"]
 [tool.setuptools.package-data]
 contentstack_utils = ["assets/regions.json"]
 
-[tool.pytest.ini_options]
+[tool.pytest]
 testpaths = ["tests"]
 python_files = ["test_*.py"]
-addopts = "-ra"
+addopts = ["-ra", "--import-mode=importlib"]
+strict = true

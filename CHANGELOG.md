@@ -19,6 +19,8 @@
 - Removed deprecated `setup_requires` / `tests_require` from setuptools config.
 - Added a GitHub Actions test workflow covering Python 3.6–3.13.
 - Extended Trove classifiers for Python 3.10–3.13 (still supports 3.6+).
+- Configured pytest via `[tool.pytest]` in `pyproject.toml` (replaces deprecated
+  `[tool.pytest.ini_options]`).
 
 ## v1.6.0 (2026-06-22)
 
