@@ -51,10 +51,4 @@ jobs:
           python -c "from contentstack_utils import Utils, Options; print('import ok')"
 
       - name: Run tests
-        run: |
-          # --import-mode=importlib (pyproject addopts) requires Python 3.7+.
-          if python -c "import sys; sys.exit(0 if sys.version_info >= (3, 7) else 1)"; then
-            pytest tests/
-          else
-            pytest -o addopts=-ra tests/
-          fi
+        run: pytest tests/

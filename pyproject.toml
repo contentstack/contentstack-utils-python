@@ -54,5 +54,4 @@ contentstack_utils = ["assets/regions.json"]
 [tool.pytest]
 testpaths = ["tests"]
 python_files = ["test_*.py"]
-addopts = ["-ra", "--import-mode=importlib"]
-strict = true
+addopts = "-ra"
