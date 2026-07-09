@@ -125,3 +125,12 @@ if result is not None and 'entries' in result:
        option = Option()
        GQL.json_to_html(item, ['paragraph_text'], option)
 ```
+
+## Development
+
+For contributors working on this repository:
+
+```bash
+pip install -e ".[dev]"
+pytest
+```

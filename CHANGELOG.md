@@ -1,5 +1,28 @@
 # Changelog
 
+## v1.6.1 (2026-07-09)
+
+### Bug fix: Declare runtime dependency on lxml
+
+- Added `lxml` to `install_requires` with environment markers: `>=6.1.0` on
+  Python 3.8+ (matching dev `requirements.txt`), `>=4.9.0,<5` on 3.6–3.7.
+  `contentstack_utils.utils` imports `lxml.etree` at module load time, but
+  previous releases shipped with an empty `install_requires`, so
+  `pip install contentstack-utils` did not install lxml.
+
+### Packaging and CI
+
+- Migrated project metadata to `pyproject.toml` (PEP 621); kept a minimal
+  `setup.py` only for the `BuildPyWithRegions` build hook.
+- Moved dev/test dependencies to `[project.optional-dependencies] dev`
+  (install with `pip install -e ".[dev]"`).
+- Removed deprecated `setup_requires` / `tests_require` from setuptools config.
+- Added a GitHub Actions test workflow covering Python 3.6–3.13.
+- Extended Trove classifiers for Python 3.10–3.13 (still supports 3.6+).
+- Configured pytest via `[tool.pytest]` in `pyproject.toml` (replaces deprecated
+  `[tool.pytest.ini_options]`).
+- Added a **Development** section to the README for repository contributors.
+
 ## v1.6.0 (2026-06-22)
 
 ### New feature: Multi-region endpoint resolution
