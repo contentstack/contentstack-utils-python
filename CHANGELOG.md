@@ -21,8 +21,7 @@
 - Extended Trove classifiers for Python 3.10–3.13 (still supports 3.6+).
 - Configured pytest via `[tool.pytest]` in `pyproject.toml` (replaces deprecated
   `[tool.pytest.ini_options]`).
-- Updated README installation instructions for PyPI name, automatic `lxml`
-  install, and `pip install -e ".[dev]"` for local development.
+- Added a **Development** section to the README for repository contributors.
 
 ## v1.6.0 (2026-06-22)
 

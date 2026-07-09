@@ -14,62 +14,24 @@ The latest version of [PyCharm](https://www.jetbrains.com/pycharm/download/) or 
 
 ## SDK Installation and Setup
 
-### Install from PyPI
+To set up Python Utils SDK, Go to terminal and locate the virtual environment path and type below.
 
-The package is published on PyPI as **`contentstack-utils`** (hyphen). Import it in Python as **`contentstack_utils`** (underscore):
-
-```bash
-pip install contentstack-utils
+```python
+   pip install contentstack_utils
 ```
 
-Runtime dependencies (including **`lxml`**, required for HTML rendering) are installed automatically.
-
-### Install for local development
-
-Clone the repository, create a virtual environment, then install the package in editable mode with dev tools (pytest, linters):
-
-```bash
-git clone https://github.com/contentstack/contentstack-utils-python.git
-cd contentstack-utils-python
-python -m venv .venv
-source .venv/bin/activate  # Windows: .venv\Scripts\activate
-pip install -e ".[dev]"
-```
-
-Alternatively, install the package and dev dependencies separately:
-
-```bash
-pip install -e .
-pip install -r requirements.txt
-```
-
-### Run tests
-
-```bash
-pytest
-```
-
-Test discovery and defaults are configured in `pyproject.toml` under `[tool.pytest]`.
-
-### Use with the Contentstack Python SDK
-
-If you install the main Contentstack Python SDK, you may still need **`contentstack-utils`** separately depending on your SDK version and how dependencies are declared:
-
-```bash
-pip install contentstack
-pip install contentstack-utils
-```
+If you are using Contentstack Python SDK in your project by running the following commands,  then “contentstack_utils”  is already imported into your project.
 
 ## For the latest version
 
-```bash
-pip install contentstack
+```python
+   pip install Contentstack
 ```
 
 ## For the specific version
 
-```bash
-pip install contentstack==1.5.1
+```python
+   pip install Contentstack==1.5.1
 ```
 
 ## Usage
@@ -162,4 +124,13 @@ if result is not None and 'entries' in result:
    for item in entry:
        option = Option()
        GQL.json_to_html(item, ['paragraph_text'], option)
+```
+
+## Development
+
+For contributors working on this repository:
+
+```bash
+pip install -e ".[dev]"
+pytest
 ```
