@@ -11,7 +11,6 @@ permissions:
 jobs:
   test:
     runs-on: ubuntu-latest
-    continue-on-error: ${{ matrix.python-version == '3.6' || matrix.python-version == '3.7' }}
     strategy:
       fail-fast: false
       matrix:
