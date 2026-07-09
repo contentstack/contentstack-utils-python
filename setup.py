@@ -34,9 +34,11 @@ setup(
     long_description_content_type="text/markdown",
     url="https://github.com/contentstack/contentstack-utils-python",
     license='MIT',
-    version='1.6.0',
+    version='1.6.1',
     install_requires=[
-
+        # lxml 6.x requires Python 3.8+; keep 4.x for 3.6–3.7 (python_requires>=3.6).
+        "lxml>=4.9.0,<5; python_version<'3.8'",
+        "lxml>=6.1.0; python_version>='3.8'",
     ],
     setup_requires=['pytest-runner'],
     tests_require=['pytest==4.4.1'],
