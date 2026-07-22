@@ -1,5 +1,13 @@
 # Changelog
 
+## v1.6.1 (2026-07-22)
+
+### Fix: Dependency security upgrades
+
+- Upgraded `black` to `>=26.3.1` to fix a high-severity Directory Traversal vulnerability ([SNYK-PYTHON-BLACK-15518063](https://security.snyk.io/vuln/SNYK-PYTHON-BLACK-15518063)).
+- Upgraded `pip` to `>=26.1.2` to fix Arbitrary File Upload ([SNYK-PYTHON-PIP-16115367](https://security.snyk.io/vuln/SNYK-PYTHON-PIP-16115367)), Arbitrary Code Injection ([SNYK-PYTHON-PIP-16316401](https://security.snyk.io/vuln/SNYK-PYTHON-PIP-16316401)), and Directory Traversal ([SNYK-PYTHON-PIP-16964647](https://security.snyk.io/vuln/SNYK-PYTHON-PIP-16964647)) vulnerabilities.
+- Upgraded `setuptools` to `>=83.0.0` to fix an Improper Unicode Encoding Handling vulnerability ([SNYK-PYTHON-SETUPTOOLS-17895075](https://security.snyk.io/vuln/SNYK-PYTHON-SETUPTOOLS-17895075)).
+
 ## v1.6.0 (2026-06-22)
 
 ### New feature: Multi-region endpoint resolution
